@@ -1,21 +1,32 @@
 <template>
 
-
+<div class="sticky-top">
 <header>
+  
+
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="44">
+            <img src="../assets/img/logo.png" alt="Bootstrap" width="auto" height="100">
         </a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">Calender</a></li>
-                <li><a href="#services">Like</a></li>
-                <li><a href="#portfolio">Sværd</a></li>
-                <li><a href="#contact">Ticketmaster</a></li>
+                <li>
+                    <img src="../assets/img/calendar.png" alt="Bootstrap" width="auto" height="44">
+                </li>
+                <li>
+                    <img src="../assets/img/heart.png" alt="Bootstrap" width="auto" height="44">
+                </li>
+                <li>
+                    <img src="../assets/img/sword.png" alt="Bootstrap" width="auto" height="44">
+                </li>
+                <li>
+                    <img src="../assets/img/tickets.png" alt="Bootstrap" width="auto" height="44">
+                </li>
             </ul>
         </nav>
     </div>
 </header>
+</div>
   
 </template>
 
