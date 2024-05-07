@@ -1,19 +1,21 @@
 <template>
 
+
 <header>
     <div class="container">
-        <h1 class="logo">Your Site</h1>
+        <a class="navbar-brand" href="#">
+            <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="44">
+        </a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">Calender</a></li>
+                <li><a href="#services">Like</a></li>
+                <li><a href="#portfolio">Sværd</a></li>
+                <li><a href="#contact">Ticketmaster</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
   
 </template>
 
@@ -32,9 +34,10 @@ body, html {
 
 /* Styling for the header section */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #023a6b;
+    color: #f2b613;
     padding: 20px 0;
+    z-index: 1000;
 }
 
 .container {
@@ -62,7 +65,7 @@ header {
 }
 
 .nav-links li a {
-    color: #fff;
+    color: #f2b613;
     text-decoration: none;
     transition: color 0.3s ease;
 }
