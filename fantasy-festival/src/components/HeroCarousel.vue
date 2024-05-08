@@ -40,7 +40,14 @@
 <style scoped>
 
 .carousel {
-    margin-top: auto; /* Adjust this value to position the carousel below the navigation bar */
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.6);
    
   }
 </style>
