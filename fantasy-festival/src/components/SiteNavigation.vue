@@ -91,6 +91,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
+    z-index: 1;
 }
 
 .navbar-scrolled{

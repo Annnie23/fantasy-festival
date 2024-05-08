@@ -2,6 +2,7 @@
   <div>
     <hero-carousel />
   </div>
+
 </template>
 
 <script>
