@@ -13,14 +13,30 @@
 
 <div class="carousel-inner">
   <div class="carousel-item active">
-    <img src="../assets/img/slide1.png" alt="Los Angeles" class="d-block w-100">
+    <img src="../assets/img/slide1.jpg" alt="Los Angeles" class="d-block w-100">
   </div>
   <div class="carousel-item">
-    <img src="../assets/img/slide2.png" alt="Chicago" class="d-block w-100">
+    <img src="../assets/img/slide2.jpg" alt="Chicago" class="d-block w-100">
   </div>
   <div class="carousel-item">
-    <img src="../assets/img/slide3.png" alt="New York" class="d-block w-100">
+    <img src="../assets/img/slide3.jpg" alt="New York" class="d-block w-100">
   </div>
+  <div class="carousel-item">
+    <img src="../assets/img/slide4.jpg" alt="New York" class="d-block w-100">
+  </div>
+  <div class="carousel-item">
+    <img src="../assets/img/slide5.jpg" alt="New York" class="d-block w-100">
+  </div>
+  <div class="carousel-item">
+    <img src="../assets/img/slide6.jpg" alt="New York" class="d-block w-100">
+  </div>
+  <div class="carousel-item">
+    <img src="../assets/img/slide7.jpg" alt="New York" class="d-block w-100">
+  </div>
+  <div class="carousel-item">
+    <img src="../assets/img/slide8.jpg" alt="New York" class="d-block w-100">
+  </div>
+
 </div>
 
 
@@ -39,12 +55,12 @@
         <div class="row justify-content-center">
           <div class="col-md-4">
             <div class="card-home">
-              <a href="https://github.com/Annnie23">
+              <a href="https://fantasyfestival.dk/">
                 <img src="../assets/img/gnist.jpg" alt="" width="auto" height="44">
               </a>
               <div class="card-body">
                 <h3 class="text-2xl font-bold">Fantasy Festival</h3>
-                <p>Have a look at my Github, this is where I store all of my development projects.</p>
+                <p>Træd ind i det magiske univers, hvor monstre og mystiske væsner bor. Oplev spændende foredrag, fantastiske koncerter, det bedste fantasylitteratur, uhyggelige aktiviteter og som noget helt nyt: Fantasy Quest.</p>
               </div>
             </div>
           </div>
