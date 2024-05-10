@@ -66,29 +66,31 @@
           </div>
           <div class="col-md-4">
             <div class="card-home">
-              <a href="https://www.linkedin.com/in/anne-sophie-nielsen/">
+              <a href="https://fantasyfestival.dk/fantasy-quest-esbjerg">
                 <img src="../assets/img/sword.png" alt="" width="auto" height="44">
               </a>
               <div class="card-body">
                 <h3 class="text-2xl font-bold">Fantasy Quest</h3>
-                <p>Follow me on LinkedIn to see much more about my skills, education, and work.</p>
+                <p>Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? Så gør dig klar til Fantasy Quest Esbjerg.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card-home">
-              <a href="https://www.youtube.com/watch?v=WFMQ-o4lTuY">
+              <a href="https://www.ticketmaster.dk/artist/fantasyfestival-billetter/1233494">
                 <img src="../assets/img/tickets.png" alt="" width="auto" height="44">
               </a>
               <div class="card-body">
                 <h3 class="text-2xl font-bold">Billetter</h3>
-                <p>Press play, and let me introduce myself right here in my video CV.</p>
+                <p>Der er gratis adgang flere forskellige steder, men aktiviteter og foredrag kræver, at du køber et aktivitetsarmbånd. Bliv klogere på, hvad der er gratis, hvad du kan bruge aktivitetsarmbåndet til, hvad du gør med pladsreservation. </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <img src="../assets/img/footer.png" class="img-fluid" alt="...">
 
 </template>
 
@@ -100,7 +102,7 @@
 
 .carousel {
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -123,23 +125,17 @@
     color: #5c3d89;
     padding: 1rem;
     border-radius: 0px;
-
   }
 
   .bg-green {
     margin-top: 100vh;
+    padding-top: 20px;
   }
 
   @media screen and (max-width: 768px){
     .bg-green {
       margin-top: 50vh;
     }
-
-    /* .carousel{
-      display: none;
-    } */
-
-
     
   }
 

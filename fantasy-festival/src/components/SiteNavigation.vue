@@ -17,14 +17,14 @@
           <a class="nav-link active" aria-current="page" href="https://esbjergfestuge.dk/program">
             <img src="../assets/img/calendar.png" alt="Bootstrap" width="auto" height="44">
           </a>
-          <span v-if="isScrolled">Kalender</span>
+          <span v-if="isScrolled">Program</span>
 
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://esbjergfestuge.dk/program?minefavoritter=true">
             <img src="../assets/img/heart.png" alt="Bootstrap" width="auto" height="44">
           </a>
-          <span v-if="isScrolled">Favoritter</span>
+          <span v-if="isScrolled">Aktiviteter</span>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://fantasyfestival.dk/">
@@ -101,7 +101,7 @@ export default {
 }
 
 .navbar.navbar-scrolled{
-    background-color: #062540 !important;
+    background-color: #023a6b !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
