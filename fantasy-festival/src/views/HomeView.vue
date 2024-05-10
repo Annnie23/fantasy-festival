@@ -31,6 +31,49 @@
   <span class="carousel-control-next-icon"></span>
 </button>
 </div>
+
+
+
+<section class="bg-green">
+      <div class="container py-6">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="card-home">
+              <a href="https://github.com/Annnie23">
+                <img src="../assets/img/gnist.jpg" alt="" width="auto" height="44">
+              </a>
+              <div class="card-body">
+                <h3 class="text-2xl font-bold">Fantasy Festival</h3>
+                <p>Have a look at my Github, this is where I store all of my development projects.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-home">
+              <a href="https://www.linkedin.com/in/anne-sophie-nielsen/">
+                <img src="../assets/img/sword.png" alt="" width="auto" height="44">
+              </a>
+              <div class="card-body">
+                <h3 class="text-2xl font-bold">Fantasy Quest</h3>
+                <p>Follow me on LinkedIn to see much more about my skills, education, and work.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-home">
+              <a href="https://www.youtube.com/watch?v=WFMQ-o4lTuY">
+                <img src="../assets/img/tickets.png" alt="" width="auto" height="44">
+              </a>
+              <div class="card-body">
+                <h3 class="text-2xl font-bold">Billetter</h3>
+                <p>Press play, and let me introduce myself right here in my video CV.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 </template>
 
 <script>
@@ -41,7 +84,7 @@
 
 .carousel {
     width: 100%;
-    height: 100vh;
+    height: auto;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -50,4 +93,38 @@
     filter: brightness(0.6);
    
   }
+
+  .card-home {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+    align-content: center;
+    color: #5c3d89;
+    padding: 1rem;
+    border-radius: 0px;
+
+  }
+
+  .bg-green {
+    margin-top: 100vh;
+  }
+
+  @media screen and (max-width: 768px){
+    .bg-green {
+      margin-top: 50vh;
+    }
+
+    /* .carousel{
+      display: none;
+    } */
+
+
+    
+  }
+
 </style>
