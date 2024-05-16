@@ -90,7 +90,7 @@
       </div>
     </section>
 
-    <img src="../assets/img/footer.png" class="img-fluid" alt="...">
+    <!-- <img src="../assets/img/footer.png" class="img-fluid" alt="...">  sat i footer--> 
 
 </template>
 
@@ -126,7 +126,7 @@
     padding: 1rem;
     border-radius: 0px;
   }
-
+/*  har sat denne del ind i main.css
   .bg-green {
     margin-top: 100vh;
     padding-top: 20px;
@@ -137,6 +137,6 @@
       margin-top: 50vh;
     }
     
-  }
+  } */
 
 </style>

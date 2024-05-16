@@ -1,4 +1,5 @@
 <template>
+  <img src="../assets/img/footer.png" class="img-fluid" alt="...">
   <footer class="footer">
     <div class="container">
       <div class="row">

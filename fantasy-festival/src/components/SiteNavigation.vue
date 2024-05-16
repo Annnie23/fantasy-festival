@@ -6,7 +6,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-        <img src="../assets/img/logo.png" alt="Bootstrap" width="auto" height="44">
+        <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="auto">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,12 +20,13 @@
           <span v-if="isScrolled">Program</span>
 
         </li>
-        <li class="nav-item">
+        <RouterLink to="/program" class="nav-item">
           <a class="nav-link" href="https://esbjergfestuge.dk/program?minefavoritter=true">
             <img src="../assets/img/heart.png" alt="Bootstrap" width="auto" height="44">
           </a>
           <span v-if="isScrolled">Aktiviteter</span>
-        </li>
+        </RouterLink>
+       
         <li class="nav-item">
           <a class="nav-link" href="https://fantasyfestival.dk/">
             <img src="../assets/img/sword.png" alt="Bootstrap" width="auto" height="44">

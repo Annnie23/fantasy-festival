@@ -8,3 +8,15 @@
   display: flex;
   
 }
+
+.bg-green {
+  margin-top: 100vh;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+  .bg-green {
+    margin-top: 50vh;
+  }
+  
+}
