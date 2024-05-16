@@ -1,26 +1,22 @@
 <template>
     <div class="container py-6">
-        <b-img src="../assets/img/slide1.jpg" fluid-grow alt=""></b-img>
+        <img src="../assets/img/slide1.jpg" class="img-fluid head" alt="Responsive image"></img>
     </div>
 
-    <div>
-       <section class="bg-green">
-            <b-card no-body class="overflow-hidden" style="max-width: 540px;">
-                <b-row no-gutters>
-                    <b-col md="6">
-                        <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image" class="rounded-0"></b-card-img>
-                    </b-col>
-                    <b-col md="6">
-                        <b-card-body title="Horizontal Card">
-                        <b-card-text>
-                            This is a wider card with supporting text as a natural lead-in to additional content.
-                            This content is a little bit longer.
-                        </b-card-text>
-                        </b-card-body>
-                    </b-col>
-                </b-row>
-            </b-card>
-       </section>
+    <h1 class="justify-content">program</h1>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="../assets/img/gnist.jpg" class="img-fluid img-thumbnail rounded" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -29,6 +25,9 @@ import { ref } from 'vue'
 </script>
 
 <style scoped>
-
+.head{
+    height: auto;
+    width: fit-content;
+}
 
 </style>
