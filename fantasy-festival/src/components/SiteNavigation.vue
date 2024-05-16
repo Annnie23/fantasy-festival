@@ -1,3 +1,4 @@
+@import
 <template>
 
 
@@ -5,9 +6,9 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-        <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="auto">
-    </a>
+    <RouterLink to="/" class="navbar-brand">
+        <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="auto" style="pointer-events: none;">
+      </RouterLink>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
