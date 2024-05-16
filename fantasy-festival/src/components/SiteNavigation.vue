@@ -1,4 +1,3 @@
-@import
 <template>
 
 
@@ -7,38 +6,40 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div class="container-fluid">
     <RouterLink to="/" class="navbar-brand">
-        <img src="../assets/img/logo.png" alt="Bootstrap" width="50" height="auto" style="pointer-events: none;">
+        <img src="../assets/img/logo.png" alt="Logo" width="150" height="auto" style="pointer-events: none;">
       </RouterLink>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://esbjergfestuge.dk/program">
-            <img src="../assets/img/calendar.png" alt="Bootstrap" width="auto" height="44">
+        <RouterLink to="/" class="nav-item">
+          <a class="nav-link active" aria-current="page" href="">
+            <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="80">
+          </a>
+          <span v-if="isScrolled">Forside</span>
+        </RouterLink>
+
+        <RouterLink to="/program" class="nav-item">
+          <a class="nav-link" href="">
+            <img src="../assets/img/program.png" alt="Program" width="auto" height="80">
           </a>
           <span v-if="isScrolled">Program</span>
-
-        </li>
-        <RouterLink to="/program" class="nav-item">
-          <a class="nav-link" href="https://esbjergfestuge.dk/program?minefavoritter=true">
-            <img src="../assets/img/heart.png" alt="Bootstrap" width="auto" height="44">
-          </a>
-          <span v-if="isScrolled">Aktiviteter</span>
         </RouterLink>
        
-        <li class="nav-item">
-          <a class="nav-link" href="https://fantasyfestival.dk/">
-            <img src="../assets/img/sword.png" alt="Bootstrap" width="auto" height="44">
+          <RouterLink to="/quest" class="nav-item">
+          <a class="nav-link" href="">
+            <img src="../assets/img/quest.png" alt="Quest" width="auto" height="80">
           </a>
           <span v-if="isScrolled">Quest</span>
-        </li>
+        </RouterLink>
+    
         <li class="nav-item">
-          <a class="nav-link" href="https://fantasyfestival.dk/fantasy-quest-esbjerg">
-            <img src="../assets/img/tickets.png" alt="Bootstrap" width="auto" height="44">
+          <a class="nav-link" href="https://fantasyfestival.dk/">
+            <img src="../assets/img/drage.png" alt="Festival" width="auto" height="80">
             </a>
-            <span v-if="isScrolled">Billetter</span>
+            <span v-if="isScrolled">Fantasy Festival</span>
         </li>
       </ul>
     </div>
@@ -91,7 +92,6 @@ export default {
 
 <style scoped>
 
-
 .navbar { 
     background-color: transparent !important;
     margin: 0 auto;
@@ -103,7 +103,7 @@ export default {
 }
 
 .navbar.navbar-scrolled{
-    background-color: #023a6b !important;
+    background-color: var(--blåsort) !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -116,10 +116,12 @@ export default {
 }
 
 span{
-    color: #f2b613;
-    font-size: 15px;
-    padding-left: 10px;
+    color: var(--gul);
+    font-size: 25px;
+    padding-left: 15px;
+    text-decoration: none;
 }
+
 
 .nav-item {
   display: flex;
@@ -140,13 +142,12 @@ span{
 }
 
 .navbar-toggler {
-  background-color: #f2b613;
+  background-color: var(--orange);
 }
 
 .navbar-collapse {
   background-color: transparent;
   position: absolute;
-  /* top: 100%; */
   width: 100%;
   padding-right: 24px;
 }
@@ -164,8 +165,7 @@ span{
     .navbar-collapse .nav-item span,
   .navbar-collapse .nav-item img {
     display: inline-block;
-    /* padding-right: 20px !important; Add !important */
-    transition: padding 0s !important; /* Add !important */
+    transition: padding 0s !important; 
   }
     
  } 
