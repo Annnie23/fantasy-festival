@@ -1,19 +1,20 @@
 <template>
-    <div class="container py-6">
-        <img src="../assets/img/slide1.jpg" class="img-fluid head" alt="Responsive image"></img>
-    </div>
+    <img src="../assets/img/slide1.jpg" alt="">
 
-    <h1 class="justify-content">program</h1>
-
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-4">
-                <img src="../assets/img/gnist.jpg" class="img-fluid img-thumbnail rounded" alt="...">
-            </div>
-            <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <div class="section py-6">
+        <div class="container py-6">
+            <h1 class="--gul">Program</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card-home">
+                        <a href="https://fantasyfestival.dk/">
+                            <img src="../assets/img/gnist.jpg" alt="" width="auto" height="44">
+                        </a>
+                        <h2>Velkommen til Fantasy
+                            Festival</h2>
+                        <p>Vi glæder os til at byde dig velkommen til en verden fyldt med magi, mystik og eventyr. Vi har
+                            sammensat et program, der byder på noget for enhver smag. Vi glæder os til at se dig!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -25,9 +26,11 @@ import { ref } from 'vue'
 </script>
 
 <style scoped>
-.head{
-    height: auto;
-    width: fit-content;
-}
+/* Importer base.css */
+@import '../assets/base.css';
 
+/* Brug de definerede variabler og klasser */
+.--gul {
+    color: var(--gul);
+}
 </style>
