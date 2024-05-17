@@ -1,6 +1,3 @@
-
-@import css from '../assets/main.css'
-
 <template>
     <div class="container">
       <div class="image">
@@ -11,17 +8,18 @@
         <h1 class="--gul">
           Program
         </h1>
-        <h3>
-            Family Quest - DagQuest
-        </h3>
-        <h3 class="--gul">
-            Fantasy Quest - AftenQuest 
-        </h3>
-        <div class="card-container flex-box">
+        <h6>
+          Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
+          <br> Så gør dig klar til Fantasy Quest Esbjerg.
+        </h6>
+        <h3 class="--gul"></h3>
+      </div>
+  
+      <div class="card-container flex-box">
         <div v-for="programItem in filteredProgramItems" :key="programItem.id" class="card mb-3" style="max-width: 540px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img :src="programItem.image" class="img-fluid rounded-start  sm:thumbnail " :alt="programItem.title">
+              <img :src="programItem.image" class="img-fluid rounded-start sm:thumbnail " :alt="programItem.title">
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -33,7 +31,6 @@
           </div>
         </div>
       </div>
-    </div>
     </div>
   </template>
   
@@ -50,10 +47,18 @@
   </script>
   
   <style scoped>
-  /* .container {
+  body {
+    background-color: var(--mørkeblå); /* Anvend baggrundsfarven på html og body */
+    margin: 0; /* Fjern standardmarginer for at sikre, at farven dækker hele siden */
+    padding: 0; /* Fjern standardfyldning for at sikre, at farven dækker hele siden */
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
-  } */
+    background-color: var(--mørkeblå); /* Baggrundsfarve for den øverste container */
+    align-items: center;
+  }
   
   .headline {
     margin-top: 20px; /* Tilføjer lidt afstand over overskriften */
@@ -65,34 +70,27 @@
     flex-direction: column;
     align-items: center; /* Centrerer kortene horisontalt */
     margin-top: 20px; /* Tilføjer lidt afstand over kortene */
-    background-color: var(--mørkeblå);
+    background-color: var(--mørkeblå); /* Baggrundsfarve for kortcontaineren */
   }
-
-  .card{
-    background-color: var(--mørkeblå);
+  
+  .card {
+    background-color: var(--blå); /* Baggrundsfarve for kort */
     border-color: var(--gul);
-    color: var(--gul)
-       
+    color: var(--gul);
   }
-  .p{
-      color: var(--gul)
-    };
-
-
-
-    .image {
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-    }
-    /* Brug de definerede variabler og klasser */
+  
+  .image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
   .--gul {
-      color: var(--gul);
+    color: var(--gul);
   }
-
-  .--mørkeblå{
-    color: var(--mørkeblå)
+  
+  .--mørkeblå {
+    background-color: var(--mørkeblå); /* Baggrundsfarve for hele siden */
   }
-
   </style>
   
