@@ -1,6 +1,3 @@
-
-@import css from '../assets/main.css'
-
 <template>
     <div class="container">
       <div class="image">
@@ -11,30 +8,52 @@
         <h1 class="--gul">
           Program
         </h1>
-        <h3>
-            Family Quest - DagQuest
-        </h3>
-        <h3 class="--gul">
-            Fantasy Quest - AftenQuest 
-        </h3>
-        <div class="card-container flex-box">
-        <div v-for="programItem in filteredProgramItems" :key="programItem.id" class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img :src="programItem.image" class="img-fluid rounded-start  sm:thumbnail " :alt="programItem.title">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title --gul">{{ programItem.title }}</h5>
-                <p class="card-text">{{ programItem.description }}</p>
-                <p class="card-text"><small>{{ programItem.date }} at {{ programItem.hour }}</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h6>
+          Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
+          <br> Så gør dig klar til Fantasy Quest Esbjerg.
+        </h6>
+        <h3 class="--gul"></h3>
       </div>
     </div>
+
+    <div class="card">
+        <div v-for="programItem in filteredProgramItems" :key="programItem.id" class="card mb-3"
+        <h2
+
+            <h2> slot="title"> Se festugens spændende program</h2>
+
+            <p slot="text">
+                Glæd dig til fede koncerter, forfriskende yoga, kunst på havnen og opleveler for hele familien. Esbjerg Festuge 2024 byder på lidt godt til alle!
+            </p>
+
+            <div slot="link">
+                <bui-web-button class="moliri-solid" size="small">
+                    <a href="https://esbjergfestuge.dk/program" target="_self" onclick="trackLinkClick(event, this, 'href', 'esbjergfestuge.dk', '_self')">Program</a>
+                </bui-web-button>
+            </div>
+
+       
+
     </div>
+    </div>
+
+
+    <div style="display: flex; align-items: center; color: var(--gul); padding: 20px; border-radius: 10px;">
+    <div style="flex: 1;">
+      <img :src="programItems.image" alt="" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+    <div style="flex: 2; padding-left: 20px;">
+      <h2>Se festugens spændende program</h2>
+      <p>
+        Glæd dig til fede koncerter, forfriskende yoga, kunst på havnen og oplevelser for hele familien. Esbjerg Festuge 2024 byder på lidt godt til alle!
+      </p>
+      <a href="https://esbjergfestuge.dk/program" target="_self" @click="trackLinkClick('https://esbjergfestuge.dk/program')" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #FFF; text-decoration: none; border-radius: 5px;">Program</a>
+    </div>
+  </div>
+
+     
+  
+      
   </template>
   
   <script setup>
@@ -50,49 +69,36 @@
   </script>
   
   <style scoped>
-  /* .container {
+  body {
+    margin: 0; /* Fjern standardmarginer for at sikre, at farven dækker hele siden */
+    padding: 0; /* Fjern standardfyldning for at sikre, at farven dækker hele siden */
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
-  } */
+    align-items: center;
+  }
   
   .headline {
     margin-top: 20px; /* Tilføjer lidt afstand over overskriften */
     align-items: flex-start;
   }
   
-  .card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrerer kortene horisontalt */
-    margin-top: 20px; /* Tilføjer lidt afstand over kortene */
-    background-color: var(--mørkeblå);
+  
+  
+  .image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
   }
-
-  .card{
-    background-color: var(--mørkeblå);
-    border-color: var(--gul);
-    color: var(--gul)
-       
-  }
-  .p{
-      color: var(--gul)
-    };
-
-
-
-    .image {
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-    }
-    /* Brug de definerede variabler og klasser */
+  
   .--gul {
-      color: var(--gul);
+    color: var(--gul);
   }
-
-  .--mørkeblå{
-    color: var(--mørkeblå)
+  
+  .--mørkeblå {
+    background-color: var(--mørkeblå); /* Baggrundsfarve for hele siden */
   }
-
   </style>
   
