@@ -15,26 +15,26 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <RouterLink to="/" class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">
+          <a class="nav-link active" aria-current="page" href="#">
             <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="80">
           </a>
           <span v-if="isScrolled">Forside</span>
         </RouterLink>
 
         <RouterLink to="/program" class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="#">
             <img src="../assets/img/program.png" alt="Program" width="auto" height="80">
           </a>
           <span v-if="isScrolled">Program</span>
         </RouterLink>
        
           <RouterLink to="/quest" class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="#">
             <img src="../assets/img/quest.png" alt="Quest" width="auto" height="80">
           </a>
           <span v-if="isScrolled">Quest</span>
         </RouterLink>
-    
+        
         <li class="nav-item">
           <a class="nav-link" href="https://fantasyfestival.dk/">
             <img src="../assets/img/drage.png" alt="Festival" width="auto" height="80">
@@ -122,6 +122,10 @@ span{
     text-decoration: none;
 }
 
+a {
+  text-decoration: none !important;
+
+}
 
 .nav-item {
   display: flex;

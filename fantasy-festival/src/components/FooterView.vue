@@ -84,6 +84,11 @@ import css from '../assets/main.css'
   color: var(--gul);
   margin: 0;
   font-size: 16px;
+  text-decoration: none;  /* Remove underline from all footer links */
+}
+
+.footer a:hover {
+  text-decoration: underline;  /* Optional: Add underline on hover for better UX */
 }
 .footer p {
   color: var(--gul);
