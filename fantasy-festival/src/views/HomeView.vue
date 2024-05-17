@@ -6,7 +6,7 @@
       <div class="carousel-item active">
         <img src="../assets/img/slide1.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
-          <div class="text-box">
+          <div class="text-box-left">
             <h3>Welcome to My Website</h3>
             <p>This is the first slide of my carousel.</p>
           </div>
