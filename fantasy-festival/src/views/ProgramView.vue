@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
-    <div class="image">
-      <img src="../assets/img/slide1.jpg" alt="">
+  <div class="image">
+      <img class="img-fluid d-block w-100" src="../assets/img/slide2.jpg" alt="">
     </div>
-
-    <section variant="dynamic-xp" class="glass-effect">
+  <div class="container">
+    <section variant="dynamic-xp" class="">
       <h2 class="--mørkeblå fw-bolder">Program</h2>
       <p class="--mørkeblå">
         Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
@@ -12,7 +11,7 @@
       </p>
     </section>
 
-    <div class="grid-container">
+    <div class="grid-container mb-5">
       <div v-for="item in filteredProgramItems" :key="item.id" class="card">
         <div class="card-wrapper">
           <div class="image-card">
@@ -48,11 +47,13 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding:0;
+  margin-bottom: 120px;
 }
 
 section {
   margin-top: 60px;
-  padding: 20px;
+  padding: 0px;
   border-radius: 8px;
   color: var(--mørkeblå);
 }
@@ -60,7 +61,7 @@ section {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 200px; /* Juster mellemrum mellem kortene efter behov */
+  gap: 250px; /* Juster mellemrum mellem kortene efter behov */
 }
 
 .card {
@@ -91,6 +92,7 @@ section {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .image-card img {
@@ -106,6 +108,9 @@ section {
   background-color: rgb(2, 58, 107, 0.8);
   padding: 10px;
   color: var(--gul);
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;  
 }
 
 .text-card h2 {
@@ -134,7 +139,7 @@ section {
 
 .image {
   width: 100%;
-  height: 300px;
+  height: 450px;
   overflow: hidden;
 }
 </style>
