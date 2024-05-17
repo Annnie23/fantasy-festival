@@ -15,44 +15,6 @@
         <h3 class="--gul"></h3>
       </div>
     </div>
-
-    <div class="card">
-        <div v-for="programItem in filteredProgramItems" :key="programItem.id" class="card mb-3"
-        <h2
-
-            <h2> slot="title"> Se festugens spændende program</h2>
-
-            <p slot="text">
-                Glæd dig til fede koncerter, forfriskende yoga, kunst på havnen og opleveler for hele familien. Esbjerg Festuge 2024 byder på lidt godt til alle!
-            </p>
-
-            <div slot="link">
-                <bui-web-button class="moliri-solid" size="small">
-                    <a href="https://esbjergfestuge.dk/program" target="_self" onclick="trackLinkClick(event, this, 'href', 'esbjergfestuge.dk', '_self')">Program</a>
-                </bui-web-button>
-            </div>
-
-       
-
-    </div>
-    </div>
-
-
-    <div style="display: flex; align-items: center; color: var(--gul); padding: 20px; border-radius: 10px;">
-    <div style="flex: 1;">
-      <img :src="programItems.image" alt="" style="width: 100%; height: auto; border-radius: 10px;">
-    </div>
-    <div style="flex: 2; padding-left: 20px;">
-      <h2>Se festugens spændende program</h2>
-      <p>
-        Glæd dig til fede koncerter, forfriskende yoga, kunst på havnen og oplevelser for hele familien. Esbjerg Festuge 2024 byder på lidt godt til alle!
-      </p>
-      <a href="https://esbjergfestuge.dk/program" target="_self" @click="trackLinkClick('https://esbjergfestuge.dk/program')" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #FFF; text-decoration: none; border-radius: 5px;">Program</a>
-    </div>
-  </div>
-
-     
-  
       
   </template>
   
