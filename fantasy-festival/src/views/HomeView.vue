@@ -4,7 +4,7 @@
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../assets/img/slide1.jpg" alt="Los Angeles" class="d-block w-100">
+        <img src="../assets/img/slide1.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <div class="text-box">
             <h3>Welcome to My Website</h3>
@@ -13,25 +13,25 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide2.jpg" alt="Chicago" class="d-block w-100">
+        <img src="../assets/img/slide2.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide3.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide3.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide4.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide4.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide5.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide5.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide6.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide6.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide7.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide7.jpg" alt="slide" class="d-block w-100">
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide8.jpg" alt="New York" class="d-block w-100">
+        <img src="../assets/img/slide8.jpg" alt="slide" class="d-block w-100">
       </div>
     </div>
 
