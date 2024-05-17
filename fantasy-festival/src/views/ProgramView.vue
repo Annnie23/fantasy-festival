@@ -1,66 +1,140 @@
 <template>
-    <div class="container">
-      <div class="image">
-        <img src="../assets/img/slide1.jpg" alt="">
-      </div>
-  
-      <div class="headline --gul ">
-        <h1 class="--gul">
-          Program
-        </h1>
-        <h6>
-          Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
-          <br> Så gør dig klar til Fantasy Quest Esbjerg.
-        </h6>
-        <h3 class="--gul"></h3>
+  <div class="container">
+    <div class="image">
+      <img src="../assets/img/slide1.jpg" alt="">
+    </div>
+
+    <section variant="dynamic-xp" class="glass-effect">
+      <h2 class="--mørkeblå fw-bolder">Program</h2>
+      <p class="--mørkeblå">
+        Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
+        <br> Så gør dig klar til Fantasy Quest Esbjerg.
+      </p>
+    </section>
+
+    <div class="grid-container">
+      <div v-for="item in filteredProgramItems" :key="item.id" class="card">
+        <div class="card-wrapper">
+          <div class="image-card">
+            <img :src="item.image" :alt="item.title">
+          </div>
+          <div class="text-card">
+            <h2>{{ item.title }}</h2>
+            <p>
+              {{ item.description }} <br>
+              {{ item.date }} <br>
+              {{ item.hour }}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-      
-  </template>
-  
-  <script setup>
+  </div>
+</template>
+
+<script setup>
   import { ref, computed } from 'vue'
   import getProgramItems from '@/modules/getProgram'
   
   const { programItems } = getProgramItems()
   
   const filteredProgramItems = computed(() => {
-    // Implementer din filtreringslogik her
-    return programItems.value // Indtil videre returnerer vi blot alle programelementer
+    return programItems.value
   })
-  </script>
-  
-  <style scoped>
-  body {
-    margin: 0; /* Fjern standardmarginer for at sikre, at farven dækker hele siden */
-    padding: 0; /* Fjern standardfyldning for at sikre, at farven dækker hele siden */
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+section {
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--mørkeblå);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 200px; /* Juster mellemrum mellem kortene efter behov */
+}
+
+.card {
+  grid-column: span 3; /* Kortet fylder 3 ud af 5 kolonner */
+  margin-top: 30px;
+  margin-bottom: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Tilpas bredden efter behov */
+  height: 200px; /* Tilpas højden efter behov */
+  position: relative;
+  border-radius: 10px; /* Tilføj rundede kanter */
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px; /* Juster mellemrum mellem image-card og text-card */
+  position: relative;
+}
+
+.image-card, .text-card {
+  grid-column: span 5; /* Både image-card og text-card fylder hele kortets bredde */
+}
+
+.image-card {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gør billedet dækker kortets område */
+}
+
+.text-card {
+  position: absolute;
+  bottom: 0;
+  right: -280px; /* Ændret fra 0 til -20px for at strække sig 20px ind over billedet til højre */
+  background-color: rgb(2, 58, 107, 0.8);
+  padding: 10px;
+  color: var(--gul);
+}
+
+.text-card h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .card {
+    grid-column: span 2; /* Kortet fylder 2 ud af 2 kolonner */
   }
-  
-  .headline {
-    margin-top: 20px; /* Tilføjer lidt afstand over overskriften */
-    align-items: flex-start;
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
   }
-  
-  
-  
-  .image {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+
+  .card {
+    grid-column: span 1; /* Kortet fylder 1 ud af 1 kolonner */
   }
-  
-  .--gul {
-    color: var(--gul);
-  }
-  
-  .--mørkeblå {
-    background-color: var(--mørkeblå); /* Baggrundsfarve for hele siden */
-  }
-  </style>
-  
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+</style>

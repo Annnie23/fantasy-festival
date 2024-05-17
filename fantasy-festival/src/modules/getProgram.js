@@ -1,8 +1,8 @@
 
 import { ref } from 'vue'
 
-import image1 from '../assets/img/Aften.jpg'
-import image2 from '../assets/img/Dag.jpg'
+import image1 from '../assets/img/slide5.jpg'
+import image2 from '../assets/img/dag.jpg'
 
 const getProgramItems = () => {
     const programItems = ref([
