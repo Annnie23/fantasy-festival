@@ -59,14 +59,14 @@
   <div class="container">
     <div class="section">
       <div class="row justify-content-evenly">
-        <div class="col-4">
+        <div class="col-lg-6">
           <img
             class="img-fluid img-thumbnail"
             src="../assets/img/dag.jpg"
             alt=""
           />
         </div>
-        <div class="col-4">
+        <div class="col-lg-6">
           <div class="section info">
             <h4>En oplevelse for hele familien</h4>
             <p>
@@ -93,14 +93,14 @@
   <div class="container">
     <div class="section">
       <div class="row justify-content-evenly">
-        <div class="col-4">
+        <div class="col-lg-6">
           <img
             class="img-fluid img-thumbnail"
             src="../assets/img/dag.jpg"
             alt=""
           />
         </div>
-        <div class="col-4">
+        <div class="col-lg-6">
           <div class="section info">
             <h3>AftenQuest: Udfordr vennerne!</h3>
             <h4>Til jer der er vilde med at løse mysterier</h4>
@@ -126,14 +126,14 @@
   <div class="container">
     <div class="section">
       <div class="row justify-content-evenly">
-        <div class="col-4">
+        <div class="col-lg-6">
           <img
             class="img-fluid img-thumbnail"
             src="../assets/img/dag.jpg"
             alt=""
           />
         </div>
-        <div class="col-4">
+        <div class="col-lg-6">
           <div class="section info">
             <h3>Esbjergs helt egen fantasyfortælling: Fantasy Quest Esbjerg</h3>
             <h4>I gamle dage sagde man...</h4>
@@ -164,18 +164,18 @@
   <div class="container">
     <div class="section">
       <div class="row justify-content-evenly">
-        <div class="col-4">
+        <div class="col-lg-6">
           <img
             class="img-fluid img-thumbnail"
             src="../assets/img/dag.jpg"
             alt=""
           />
         </div>
-        <div class="col-4">
+        <div class="col-lg-6">
           <div class="section info">
             <h3>Årene gik, og der var fred og ro...</h3>
             <p>
-              ...Men så begyndte der at ske mystiske ting. Naturen blev syg. De
+                ...Men så begyndte der at ske mystiske ting. Naturen blev syg. De
               gamle talte om ondskaben. Om vogterne. En dag trak skyerne sig
               sammen, over havet mod vest, og der blev unaturligt mørkt. Lyn
               flængede himlen. Man kunne se en stor, bevinget skabning på
@@ -196,6 +196,7 @@
       </div>
     </div>
   </div>
+
 
   <!-- Ottende sektion -->
   <div class="container">
@@ -228,18 +229,25 @@
     </div>
   </div>
 
+  <div class="container">
+    <video class="video-fluid" controls>
+          <source src="../assets/video/sample.mp4" type="video/mp4" />
+          Din browser understøtter ikke video-tagget.
+        </video>
+  </div>
+
   <!-- Niende sektion -->
   <div class="container">
     <div class="section">
       <div class="row justify-content-evenly">
-        <div class="col-4">
+        <div class="col-lg-6">
           <img
             class="img-fluid img-thumbnail"
             src="../assets/img/dag.jpg"
             alt=""
           />
         </div>
-        <div class="col-4">
+        <div class="col-lg-6">
           <div class="section info">
             <h3>Der brygges videre på Questen</h3>
             <h4>Lakserytteren er med ombord</h4>
@@ -269,66 +277,54 @@
 
   <!-- Tiende sektion -->
   <div class="container">
-    <h1>Mød årets figurer</h1>
-    <div class="figur">
-      <div class="palette">
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Arkivaren.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 1</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Gnist.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Gygaz.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Havfruedronning.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Malice.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Portal_.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
-        </div>
-        <div class="color">
-          <img
-            class="img-thumbnail"
-            src="../assets/img/figurer/Vogterkæmper.png"
-            alt=""
-          />
-          <span>Beskrivelse af billede 2</span>
+    <div class="section">
+      <h1>Mød årets helte og skurke</h1>
+      <p>Kør musen over den enkelte figur, for at læse mere</p>
+    </div>
+    <div class="gallery">
+      <div class="image-container">
+        <img src="../assets/img/figurer/Arkivaren.png" alt="Billede 1" />
+        <div class="overlay">
+          <p>Arkivaren</p>
         </div>
       </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Gnist.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>Gnist</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Gygaz.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>Gygaz</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Havfruedronning.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>Havfruedronningen</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Malice.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>Malice</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Portal_.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>Portalen</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Vogterkæmper.png" alt="Billede 2" />
+        <div class="overlay">
+          <p>De fire vogterkæmper</p>
+        </div>
+      </div>
+      <!-- Tilføj de resterende billeder på samme måde -->
     </div>
   </div>
 </template>
@@ -369,104 +365,73 @@ button {
   border: none;
   border-radius: 8px;
   width: 100px;
-  height: 45px;
+  height: 55px;
   transition: 0.3s;
 }
 
 button:hover {
   background-color: var(--blå);
-  box-shadow: 0 0 0 5px #023a6b;
+  box-shadow: 0 0 0 2px #023a6b;
   color: var(--orange);
 }
 
-.figur {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  box-shadow: 0 10px 20px #dbdbdb;
-  font-family: sans-serif;
-  padding: 20px;
-}
-
-.palette {
+.gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: row; /* Ændring til rækkeorientering */
+  justify-content: space-between;
 }
 
-.color {
-  flex: 0 0 33.33%;
-  max-width: 200px;
+.image-container {
+  position: relative;
+  width: calc(25% - 20px); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
   margin: 10px;
-  text-align: center;
   overflow: hidden;
 }
 
-.color img {
-  max-width: 100%;
+.image-container img {
+  width: 100%;
   height: auto;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-.color span {
+.overlay {
   position: absolute;
-  top: 0;
+  bottom: -50px;
   left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  padding: 10px;
+  background-color: rgba(2, 58, 107, 0.75);
+  text-align: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
 }
 
-.color:hover img {
-  transform: scale(1.1);
+.overlay p {
+  color: var(--gul);
+  font-size: 20px;
 }
 
-.color:hover span {
-  opacity: 1;
-}
-
-.color:hover {
-  flex: 2;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.color:hover span {
-  opacity: 1;
-}
-
-/* Statistiksektion */
-#stats {
-  height: 14%;
-  width: 100%;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5em;
-  box-sizing: border-box;
-  color: #bebebe;
-}
-
-#stats svg {
-  fill: #bebebe;
+.image-container:hover img {
   transform: scale(1.2);
 }
 
-/* Andre CSS-stilarter */
-/* .row {
-  padding: 20px;
-  background-color: rgba(2, 58, 107, 0.6);
-  color: var(--gul);
-  border-radius: 10px;
-} */
+.image-container:hover .overlay {
+  bottom: 0;
+  opacity: 1;
+}
+
+/* Medierækkevidder for responsivitet */
+@media screen and (max-width: 768px) {
+  .image-container {
+    width: calc(50% - 20px); /* To billeder pr. række på skærme, der er mindre end 768px brede */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-container {
+    width: calc(100% - 20px); /* Et billede pr. række på skærme, der er mindre end 480px brede */
+  }
+}
+
 </style>
