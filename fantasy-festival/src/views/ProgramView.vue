@@ -1,13 +1,17 @@
 <template>
   <div class="image">
-      <img class="img-fluid d-block w-100" src="../assets/img/slide2.jpg" alt="">
-    </div>
+    <img class="img-fluid d-block w-100" src="../assets/img/slide2.jpg" alt="">
+  </div>
   <div class="container">
     <section variant="dynamic-xp" class="">
       <h2 class="--mørkeblå fw-bolder">Program</h2>
       <p class="--mørkeblå">
-        Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter og redde hele verden? 
+        Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en "quest" for at overvinde de onde magter 
+        og redde hele verden? 
         <br> Så gør dig klar til Fantasy Quest Esbjerg.
+      </p>
+      <p>
+        <strong>Fantasy Quest Esbjerg får i 2024 både en svær aftenudgave og en familievenlig dagudgave under Fantasyfestivalen, som er skabt i samarbejde med YouTuberen Lakserytteren.</strong>
       </p>
     </section>
 
@@ -24,6 +28,9 @@
               {{ item.date }} <br>
               {{ item.hour }}
             </p>
+            <a :href="item.link" v-if="item.link" target="_blank">
+              <button type="button">{{ item.linkText }}</button>
+            </a>
           </div>
         </div>
       </div>
@@ -32,85 +39,75 @@
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue'
-  import getProgramItems from '@/modules/getProgram'
+  import { ref, computed } from 'vue';
+  import getProgramItems from '@/modules/getProgram';
   
-  const { programItems } = getProgramItems()
+  const { programItems } = getProgramItems();
   
   const filteredProgramItems = computed(() => {
-    return programItems.value
-  })
+    return programItems.value;
+  });
 </script>
 
 <style scoped>
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  padding:0;
-  margin-bottom: 120px;
+  padding: 0;
+  margin-bottom: 80px;
 }
 
 section {
   margin-top: 60px;
-  padding: 0px;
+  padding: 0;
   border-radius: 8px;
   color: var(--mørkeblå);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 250px; /* Juster mellemrum mellem kortene efter behov */
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px; /* Juster mellemrum mellem kortene efter behov */
 }
 
 .card {
-  grid-column: span 3; /* Kortet fylder 3 ud af 5 kolonner */
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
-  margin-bottom: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Tilpas bredden efter behov */
-  height: 200px; /* Tilpas højden efter behov */
+  overflow: hidden; /* Sørg for at indholdet ikke stikker ud */
   position: relative;
-  border-radius: 10px; /* Tilføj rundede kanter */
+  border: none; /* Fjern kanten */
 }
 
 .card-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px; /* Juster mellemrum mellem image-card og text-card */
-  position: relative;
-}
-
-.image-card, .text-card {
-  grid-column: span 5; /* Både image-card og text-card fylder hele kortets bredde */
+  display: flex;
+  flex-direction: row; /* Læg elementerne vandret */
+  align-items: center; /* Centrer indholdet lodret */
 }
 
 .image-card {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 10px;
+  width: 60%; /* Juster bredden på billedet */
+  height: auto;
+  flex-shrink: 0; /* Forhindrer billedet i at ændre størrelse */
 }
 
 .image-card img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover; /* Gør billedet dækker kortets område */
+  border-radius: 10px;
 }
 
 .text-card {
-  position: absolute;
-  bottom: 0;
-  right: -280px; /* Ændret fra 0 til -20px for at strække sig 20px ind over billedet til højre */
-  background-color: rgb(2, 58, 107, 0.8);
+  width: 70%; /* Juster bredden på tekstboksen */
+  margin-left: 700px; /* Juster forskydningen */
+  margin-top: 260px; /* Juster forskydningen */
+  background-color: rgba(2, 58, 107, 0.75);
   padding: 10px;
   color: var(--gul);
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;  
+  border-radius: 10px; /* Tilføj rundede kanter */
+  text-align: left; /* Centrer tekst */
+  position: absolute;
 }
 
 .text-card h2 {
@@ -119,21 +116,21 @@ section {
 
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card {
-    grid-column: span 2; /* Kortet fylder 2 ud af 2 kolonner */
-  }
-}
-
-@media (max-width: 480px) {
-  .grid-container {
     grid-template-columns: 1fr;
   }
 
-  .card {
-    grid-column: span 1; /* Kortet fylder 1 ud af 1 kolonner */
+  .card-wrapper {
+    flex-direction: column; /* Ændrer til kolonnevisning på mindre skærme */
+  }
+
+  .image-card, .text-card {
+    width: 100%; /* Gør elementerne 100% bredde på mindre skærme */
+  }
+
+  .text-card {
+    margin-left: 0; /* Fjern forskydningen på mindre skærme */
+    margin-top: 0px; /* Juster top margin på mindre skærme */
+    position: sticky;
   }
 }
 
@@ -141,5 +138,22 @@ section {
   width: 100%;
   height: 450px;
   overflow: hidden;
+}
+
+button {
+  font-family: monospace;
+  background-color: var(--mørkeblå);
+  color: var(--gul);
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--blå);
+  box-shadow: 0 0 0 5px #023A6B;
+  color: var(--orange);
 }
 </style>
