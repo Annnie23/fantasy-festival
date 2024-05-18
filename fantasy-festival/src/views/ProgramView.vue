@@ -54,7 +54,6 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  margin-bottom: 80px;
 }
 
 section {
