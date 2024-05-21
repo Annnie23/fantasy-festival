@@ -1,28 +1,22 @@
 import { ref } from 'vue';
 import image1 from '../assets/img/slide5.jpg';
-import image2 from '../assets/img/slide6.jpg';
 
-const getSections = () => {
-  const sections = ref([
-    {
-        id: 1,
-        type: 'Text',
-        h1: 'Fantasy Quest Esbjerg',
-        h3:'Er du klar til at træde ind i en verden fyldt med magi og eventyr?',
-        h3:'Tag rollen som helten i din egen episke "quest" for at besejre de mørke kræfter og redde hele verden!',
-        
-    },
-    {id: 2,
-        type: 'text',
-        content: ''
-      },
-     
+const getSectionItems = () => {
+    const sectionItems = ref([
+        {
+            id: 1,
+            image: image1,
+            title: 'Family Quest - Dag Quest',
+            description: 'En oplevelse for hele familien',
+            link: 'https://www.universe.com/events/family-quest-dagquest-tickets-C6PYX3',
+            linkText: 'Køb billet',
+            h3: 'Special Event', // Optional, remove if not needed
+            h6: 'Join us for a fun day!' // Optional, remove if not needed
+        },
     ]);
-  
 
-    return { sections };
+    return { sectionItems };
 };
 
-export default getSections;
-
+export default getSectionItems;
 
