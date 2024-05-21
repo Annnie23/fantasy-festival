@@ -16,28 +16,28 @@
       <ul class="navbar-nav">
         <RouterLink to="/" class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">
-            <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="80">
+            <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="58">
           </a>
           <span v-if="isScrolled">Forside</span>
         </RouterLink>
 
         <RouterLink to="/program" class="nav-item">
           <a class="nav-link" href="#">
-            <img src="../assets/img/program.png" alt="Program" width="auto" height="80">
+            <img src="../assets/img/program.png" alt="Program" width="auto" height="58">
           </a>
           <span v-if="isScrolled">Program</span>
         </RouterLink>
        
           <RouterLink to="/quest" class="nav-item">
           <a class="nav-link" href="#">
-            <img src="../assets/img/quest.png" alt="Quest" width="auto" height="80">
+            <img src="../assets/img/quest.png" alt="Quest" width="auto" height="56">
           </a>
           <span v-if="isScrolled">Quest</span>
         </RouterLink>
         
         <li class="nav-item">
           <a class="nav-link" href="https://fantasyfestival.dk/">
-            <img src="../assets/img/drage.png" alt="Festival" width="auto" height="80">
+            <img src="../assets/img/drage.png" alt="Festival" width="auto" height="65">
             </a>
             <span v-if="isScrolled">Fantasy Festival</span>
         </li>
@@ -132,6 +132,7 @@ a {
   flex-direction: row-reverse;
   align-items: center;
   transition: flex-direction 1s;
+  padding: 0 10px;
 }
 
 .nav-item span {

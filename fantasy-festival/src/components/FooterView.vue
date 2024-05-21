@@ -84,7 +84,7 @@ export default {
 .footer a {
   color: var(--gul);
   margin: 0;
-  font-size: 25px; 
+  font-size: 18px; 
   text-decoration: none;
 }
 
@@ -95,7 +95,7 @@ export default {
 .footer p {
   color: var(--gul);
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .card-body {
