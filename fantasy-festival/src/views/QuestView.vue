@@ -55,26 +55,79 @@
     </div>
   </div>
 
+ <!-- Cards sektion -->
+<div class="container">
+  <div class="section">
+    <div class="row" v-for="section in filteredSectionItems" :key="section.id">
+      <div class="col-lg-6">
+        <img
+          class="img-fluid img-thumbnail"
+          :src="section.image"
+          alt="Event Image"
+        />
+      </div>
+      <div class="col-lg-6">
+        <div class="section info text-card">
+          <h3 v-if="section.h3">{{ section.h3 }}</h3>
+          <h4>{{ section.title }}</h4>
+          <p>{{ section.description }}</p>
+          <h6 v-if="section.h6">{{ section.h6 }}</h6>
+          <!-- Check for the presence of the link before rendering the button -->
+          <a v-if="section.link" :href="section.link" class="button-link">
+            <button>{{ section.linkText }}</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Helte og skurke sektion -->
   <div class="container">
     <div class="section">
-      <div class="row justify-content-evenly">
-        <div class="col-lg-6">
-          <img
-            class="img-fluid img-thumbnail"
-            :src="section.image"
-            alt="Event Image"
-          />
+      <h1>Mød årets helte og skurke</h1>
+      <p>Kør musen over den enkelte figur, for at læse mere</p>
+    </div>
+    <div class="gallery">
+      <div class="image-container">
+        <img src="../assets/img/figurer/Arkivaren.png" alt="Billede af Arkivaren" />
+        <div class="overlay">
+          <p>Arkivaren</p>
         </div>
-        <div class="col-lg-6">
-          <div class="section info text-card">
-            <h3 v-if="section.h3">{{ section.h3 }}</h3>
-            <h4>{{ section.title }}</h4>
-            <p>{{ section.description }}</p>
-            <h6 v-if="section.h6">{{ section.h6 }}</h6>
-            <a :href="section.link" class="button-link">
-              <button>{{ section.linkText }}</button>
-            </a>
-          </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Gnist.png" alt="Billede af Gnist" />
+        <div class="overlay">
+          <p>Gnist</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Gygaz.png" alt="Billede af Gygaz" />
+        <div class="overlay">
+          <p>Gygaz</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Havfruedronning.png" alt="Billede af Havfruedronning" />
+        <div class="overlay">
+          <p>Havfruedronningen</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Malice.png" alt="Billede af Malice" />
+        <div class="overlay">
+          <p>Malice</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Portal_.png" alt="Billede af portalen" />
+        <div class="overlay">
+          <p>Portalen</p>
+        </div>
+      </div>
+      <div class="image-container">
+        <img src="../assets/img/figurer/Vogterkæmper.png" alt="Billede Vogterkæmper" />
+        <div class="overlay">
+          <p>De fire vogterkæmper</p>
         </div>
       </div>
     </div>
@@ -82,10 +135,20 @@
 </template>
 
 <script>
-import getSections from "@/modules/getInfo.js";
+import { ref, computed } from 'vue';
+import getSectionItems from "@/modules/getInfo.js";
 
+export default {
+  setup() {
+    const { sectionItems } = getSectionItems();
+  
+    const filteredSectionItems = computed(() => {
+      return sectionItems.value;
+    });
 
-
+    return { filteredSectionItems };
+  }
+};
 </script>
 
 <style scoped>
@@ -115,15 +178,11 @@ import getSections from "@/modules/getInfo.js";
 }
 
 .text-card {
-  width: 50%; /* Juster bredden på tekstboksen */
-  margin-left: -90px; /* Juster forskydningen */
-  /*   margin-top: 260px; */ /* Juster forskydningen */
   background-color: rgba(2, 58, 107, 0.75);
   padding: 10px;
   color: var(--gul);
-  border-radius: 10px; /* Tilføj rundede kanter */
-  text-align: left; /* Centrer tekst */
-  position: absolute;
+  border-radius: 10px;
+  text-align: left;
 }
 
 /* Knapper */
@@ -152,9 +211,7 @@ button:hover {
 
 .image-container {
   position: relative;
-  width: calc(
-    25% - 20px
-  ); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
+  width: calc(25% - 20px); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
   margin: 10px;
   overflow: hidden;
 }
@@ -166,9 +223,9 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
-.img-thumbnail {
-  border: none;
-  border-radius: 10px;
+.img-thumbnail{
+   border: none;
+   border-radius: 10px;
 }
 
 .overlay {
@@ -200,9 +257,7 @@ button:hover {
 /* Medierækkevidder for responsivitet */
 @media screen and (max-width: 768px) {
   .image-container {
-    width: calc(
-      50% - 20px
-    ); /* To billeder pr. række på skærme, der er mindre end 768px brede */
+    width: calc(50% - 20px); /* To billeder pr. række på skærme, der er mindre end 768px brede */
   }
   .overlay {
     position: absolute;
@@ -228,9 +283,7 @@ button:hover {
 
 @media screen and (max-width: 480px) {
   .image-container {
-    width: calc(
-      100% - 20px
-    ); /* Et billede pr. række på skærme, der er mindre end 480px brede */
+    width: calc(100% - 20px); /* Et billede pr. række på skærme, der er mindre end 480px brede */
   }
 
   .overlay {
@@ -254,4 +307,5 @@ button:hover {
     transform: none; /* Disable zoom effect on smaller screens */
   }
 }
+
 </style>
