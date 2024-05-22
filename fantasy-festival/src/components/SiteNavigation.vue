@@ -115,12 +115,13 @@ export default {
 
 .navbar-nav{
     margin-left: auto;
+
 }
 
 span{
     color: var(--gul);
     font-size: large;
-    padding-left: 15px;
+    padding-left: 5px;
     text-decoration: none;
 }
 
@@ -139,13 +140,12 @@ a {
 
 .nav-item span {
   opacity: 1;
-  transform: translateX(0);
   transition: opacity 0.7s, transform 0.7s;
+  margin-top: -10px;
 }
 
 .nav-item:hover span {
   opacity: 0.7;
-  transform: translateX(-10px);
 }
 
 .navbar-toggler {
@@ -154,10 +154,12 @@ a {
 
 .navbar-collapse {
   background-color: transparent;
-  position: absolute;
-  padding-right: 24px;
+  position: relative;
+  padding-right: 10px;
   width: 100%;
 }
+
+
 
 
 
@@ -169,9 +171,7 @@ a {
         width: 100px;
     }
 
-    .navbar-collapse{
-        top: 56px;
-    }
+   
     .navbar-collapse .nav-item span,
   .navbar-collapse .nav-item img {
     display: inline-block;
@@ -181,6 +181,12 @@ a {
   }
     
  } 
+
+ @media (max-width: 767px) {
+  .nav-item span {
+    margin-top: 0; /* Adjust this value as needed */
+  }
+}
 
  @media screen and (max-width: 1100px){
     .nav-item span {
