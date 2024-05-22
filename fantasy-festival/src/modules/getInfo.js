@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import image1 from '../assets/img/Dag.jpg';
+import image1 from '../assets/img/dag.jpg';
 import image2 from '../assets/img/slide5.jpg';
 import image3 from '../assets/img/slide1.jpg';
 import image4 from '../assets/img/slide7.jpg';
@@ -25,7 +25,7 @@ const getSectionItems = () => {
             undervejs i Questen rundt i Esbjergs gader.
             `,
             link: 'https://www.universe.com/events/family-quest-dagquest-tickets-C6PYX3',
-            linkText: 'Køb billet',
+            linkText: 'Køb billet her',
         },
         {
             id: 2,
@@ -42,7 +42,7 @@ const getSectionItems = () => {
                 gennemføre AftenQuesten.
                 `,
             link: 'https://www.universe.com/events/fantasy-quest-aftenquest-tickets-2PCHR4',
-            linkText: 'Køb billet',
+            linkText: 'Køb billet her',
             h3: 'Esbjergs helt egen fantasyfortælling: Fantasy Quest Esbjerg', // Optional, remove if not needed
         },
         {
