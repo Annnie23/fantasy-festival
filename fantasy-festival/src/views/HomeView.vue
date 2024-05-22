@@ -280,6 +280,11 @@ export default {
   color: var(--gul);
 }
 
+/* Stilen for billederne i de 3 cards */
+.card-home a{
+  margin-bottom: 1rem;
+}
+
 /* Justering af karouselltekster for mindre skærme */
 @media (max-width: 980px) {
   .carousel-caption {
