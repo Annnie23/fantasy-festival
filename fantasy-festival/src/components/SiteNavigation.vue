@@ -100,18 +100,24 @@ export default {
     align-items: center;
     transition: all 0.7s !important;
     z-index: 1;
+  
 }
 
 
 .navbar.navbar-scrolled{
     background-color: var(--blåsort) !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
 }
 
 .navbar-brand {
     margin-left: 20px;
+    transition: transform 0.7s; /* Add a transition for the transform property */
 }
 
+.navbar.navbar-scrolled .navbar-brand {
+  transform: scale(0.8); /* Reduce the size of the logo to 80% */
+}
 
 .navbar-nav{
     margin-left: auto;

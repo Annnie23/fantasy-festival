@@ -215,7 +215,7 @@ export default {
   z-index: -1;
 }
 
-/* Overlay gradient på hver karousellelement */
+/* Overlay gradient på hver karouselbillede */
 .carousel-item::before {
   content: "";
   position: absolute;
