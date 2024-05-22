@@ -281,62 +281,32 @@
     </div>
   </div>
 
-  <!-- Tiende sektion -->
   <div class="container">
     <div class="section">
       <h1>Mød årets helte og skurke</h1>
       <p>Kør musen over den enkelte figur, for at læse mere</p>
     </div>
-    <div class="gallery">
-      <div class="image-container">
-        <img src="../assets/img/figurer/Arkivaren.png" alt="Billede af Arkivaren" />
-        <div class="overlay">
-          <p>Arkivaren</p>
+  <div class="gallery">
+        <div v-for="item in karakterItems" :key="item.id" class="image-container">
+          <img :src="item.image" :alt="'Billede af ' + item.title" />
+          <div class="overlay">
+            <p>{{ item.title }}</p>
+          </div>
         </div>
       </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Gnist.png" alt="Billede af Gnist" />
-        <div class="overlay">
-          <p>Gnist</p>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Gygaz.png" alt="Billede af Gygaz" />
-        <div class="overlay">
-          <p>Gygaz</p>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Havfruedronning.png" alt="Billede af Havfruedronning" />
-        <div class="overlay">
-          <p>Havfruedronningen</p>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Malice.png" alt="Billede af Malice" />
-        <div class="overlay">
-          <p>Malice</p>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Portal_.png" alt="Billede af portalen" />
-        <div class="overlay">
-          <p>Portalen</p>
-        </div>
-      </div>
-      <div class="image-container">
-        <img src="../assets/img/figurer/Vogterkæmper.png" alt="Billede Vogterkæmper" />
-        <div class="overlay">
-          <p>De fire vogterkæmper</p>
-        </div>
-      </div>
-      <!-- Tilføj de resterende billeder på samme måde -->
-    </div>
   </div>
+
 </template>
 
 <script setup>
-
+ import { ref, computed } from 'vue';
+  import getKarakterItems from '@/modules/getKarakter.js';
+  
+  const { karakterItems } = getKarakterItems();
+  
+  const filteredKarakterItems = computed(() => {
+    return karakterItems.value;
+  });
 </script>
 
 <style scoped>
@@ -366,16 +336,48 @@
 }
 
 .text-card {
-  width: 50%; /* Juster bredden på tekstboksen */
-  margin-left: -90px; /* Juster forskydningen */
-/*   margin-top: 260px; */ /* Juster forskydningen */
+  width: 50%; 
+  margin-left: -90px; 
   background-color: rgba(2, 58, 107, 0.75);
   padding: 10px;
   color: var(--gul);
-  border-radius: 10px; /* Tilføj rundede kanter */
-  text-align: left; /* Centrer tekst */
+  border-radius: 10px; 
+  text-align: left; 
   position: absolute;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stabel sektioner lodret på mindre skærme */
+  }
+
+  .image-container {
+    width: 100%; /* Billedcontainerne fylder hele bredden på mindre skærme */
+    margin: 10px 0; /* Juster margener */
+  }
+
+  .overlay {
+    bottom: 0; /* Sørg for at overlays forbliver nederst på mindre skærme */
+    opacity: 1; /* Hold overlays synlige */
+    transition: none; /* Fjern overgangseffekter på overlays */
+  }
+
+  .image-container img {
+    transform: none; /* Deaktiver zoomeffekten på mindre skærme */
+  }
+
+  
+  .text-card {
+  width: 100%; 
+  background-color: rgba(2, 58, 107, 0.75);
+  padding: 10px;
+  color: var(--gul);
+  border-radius: 10px; 
+  text-align: left; 
+}
+
+}
+
 
 /* Knapper */
 button {
@@ -395,6 +397,8 @@ button:hover {
   color: var(--orange);
 }
 
+
+/* Karakter sektion */
 .gallery {
   display: flex;
   flex-wrap: wrap;
