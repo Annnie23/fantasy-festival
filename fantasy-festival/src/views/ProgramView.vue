@@ -101,8 +101,7 @@ section {
   width: 70%;
   margin-left: 700px;
   margin-top: 260px;
-  background-color: rgba(2, 58, 107, 0.75);
-  padding: 10px;
+  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);  padding: 10px;
   color: var(--gul);
   border-radius: 10px;
   text-align: left;

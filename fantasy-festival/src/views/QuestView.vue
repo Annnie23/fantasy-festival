@@ -324,6 +324,9 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   padding: 0;
 }
 
@@ -338,45 +341,14 @@
 .text-card {
   width: 50%; 
   margin-left: -90px; 
-  background-color: rgba(2, 58, 107, 0.75);
-  padding: 10px;
+  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);  padding: 10px;
   color: var(--gul);
   border-radius: 10px; 
   text-align: left; 
   position: absolute;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stabel sektioner lodret på mindre skærme */
-  }
 
-  .image-container {
-    width: 100%; /* Billedcontainerne fylder hele bredden på mindre skærme */
-    margin: 10px 0; /* Juster margener */
-  }
-
-  .overlay {
-    bottom: 0; /* Sørg for at overlays forbliver nederst på mindre skærme */
-    opacity: 1; /* Hold overlays synlige */
-    transition: none; /* Fjern overgangseffekter på overlays */
-  }
-
-  .image-container img {
-    transform: none; /* Deaktiver zoomeffekten på mindre skærme */
-  }
-
-  
-  .text-card {
-  width: 100%; 
-  background-color: rgba(2, 58, 107, 0.75);
-  padding: 10px;
-  color: var(--gul);
-  border-radius: 10px; 
-  text-align: left; 
-}
-
-}
 
 
 /* Knapper */
