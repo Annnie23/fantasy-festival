@@ -102,6 +102,7 @@ export default {
     z-index: 1;
 }
 
+
 .navbar.navbar-scrolled{
     background-color: var(--blåsort) !important;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -111,13 +112,14 @@ export default {
     margin-left: 20px;
 }
 
+
 .navbar-nav{
     margin-left: auto;
 }
 
 span{
     color: var(--gul);
-    font-size: 25px;
+    font-size: large;
     padding-left: 15px;
     text-decoration: none;
 }
@@ -153,15 +155,18 @@ a {
 .navbar-collapse {
   background-color: transparent;
   position: absolute;
-  width: 100%;
   padding-right: 24px;
+  width: 100%;
 }
 
 
 
 @media screen and (max-width: 768px) {
-    .navbar-brand {
+   
+    .navbar-brand img{
         justify-content: center;
+        display: flex;
+        width: 100px;
     }
 
     .navbar-collapse{
@@ -171,8 +176,16 @@ a {
   .navbar-collapse .nav-item img {
     display: inline-block;
     transition: padding 0s !important; 
+    padding-left: 0;
+    padding-top: 10px;
   }
     
  } 
+
+ @media screen and (max-width: 1100px){
+    .nav-item span {
+        font-size: medium;
+    }
+ }
 
 </style>

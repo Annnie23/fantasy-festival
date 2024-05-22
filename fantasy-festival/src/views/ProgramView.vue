@@ -66,46 +66,46 @@ section {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 20px; /* Juster mellemrum mellem kortene efter behov */
+  gap: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   margin-top: 30px;
-  overflow: hidden; /* Sørg for at indholdet ikke stikker ud */
+  overflow: hidden;
   position: relative;
-  border: none; /* Fjern kanten */
+  border: none;
 }
 
 .card-wrapper {
   display: flex;
-  flex-direction: row; /* Læg elementerne vandret */
-  align-items: center; /* Centrer indholdet lodret */
+  flex-direction: row;
+  align-items: center;
 }
 
 .image-card {
-  width: 60%; /* Juster bredden på billedet */
+  width: 60%;
   height: auto;
-  flex-shrink: 0; /* Forhindrer billedet i at ændre størrelse */
+  flex-shrink: 0;
 }
 
 .image-card img {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Gør billedet dækker kortets område */
+  object-fit: cover;
   border-radius: 10px;
 }
 
 .text-card {
-  width: 70%; /* Juster bredden på tekstboksen */
-  margin-left: 700px; /* Juster forskydningen */
-  margin-top: 260px; /* Juster forskydningen */
+  width: 70%;
+  margin-left: 700px;
+  margin-top: 260px;
   background-color: rgba(2, 58, 107, 0.75);
   padding: 10px;
   color: var(--gul);
-  border-radius: 10px; /* Tilføj rundede kanter */
-  text-align: left; /* Centrer tekst */
+  border-radius: 10px;
+  text-align: left;
   position: absolute;
 }
 
@@ -119,16 +119,16 @@ section {
   }
 
   .card-wrapper {
-    flex-direction: column; /* Ændrer til kolonnevisning på mindre skærme */
+    flex-direction: column;
   }
 
   .image-card, .text-card {
-    width: 100%; /* Gør elementerne 100% bredde på mindre skærme */
+    width: 100%;
   }
 
   .text-card {
-    margin-left: 0; /* Fjern forskydningen på mindre skærme */
-    margin-top: 0px; /* Juster top margin på mindre skærme */
+    margin-left: 0;
+    margin-top: 0px;
     position: sticky;
   }
 }

@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import image1 from '../assets/img/dag.jpg';
+import image1 from '../assets/img/Dag.jpg';
 import image2 from '../assets/img/slide5.jpg';
 import image3 from '../assets/img/slide1.jpg';
 import image4 from '../assets/img/slide7.jpg';

@@ -1,6 +1,4 @@
 <template>
-
-
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -167,31 +165,34 @@
 <script>
 export default {
   mounted() {
+    // Opretter en IntersectionObserver for at observere, når elementer kommer ind i synsfeltet
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
+        // Hvis et element er synligt (intersecting)
         if (entry.isIntersecting) {
+          // Animerer elementet med klassen 'card-home' med flere keyframes
           anime({
             targets: '.card-home',
             keyframes: [
-              { translateX: [-1000, 0], opacity: [0, 1] }, // kommer ind fra venstre
-              { translateX: [0, 50] },  // glider til højre
-              { translateX: [50, -30] }, // glider til venstre
-              { translateX: [-30, 0] }  // stopper i midten
+              { translateX: [-1000, 0], opacity: [0, 1] }, // Flytter elementet fra -1000px til 0px og ændrer opacity fra 0 til 1
+              { translateX: [0, 50] }, // Flytter elementet fra 0px til 50px
+              { translateX: [50, -30] }, // Flytter elementet fra 50px til -30px
+              { translateX: [-30, 0] } // Flytter elementet fra -30px til 0px
             ],
-            easing: 'easeInOutQuad',
-            duration: 3000,
-            delay: anime.stagger(200) // delay 200ms hver
+            easing: 'easeInOutQuad', // Angiver en easing-funktion for animationen
+            duration: 3000, // Varigheden af animationen i millisekunder
+            delay: anime.stagger(200) // Forsinker animationen for hver efterfølgende '.card-home'
           });
 
-          // Stop observing once the animation is triggered
+          // Stop med at observere elementet efter animationen
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1
+      threshold: 0.1 // Tærskel for, hvornår observeren udløses (10% synlighed)
     });
 
-    // Observe each card-home element
+    // Vælg alle elementer med klassen 'card-home' og begynd at observere dem
     document.querySelectorAll('.card-home').forEach((element) => {
       observer.observe(element);
     });
@@ -202,6 +203,8 @@ export default {
 
 
 <style scoped>
+
+/* Stilen for hele karousellen */
 .carousel {
   width: 100%;
   height: 100vh;
@@ -212,6 +215,7 @@ export default {
   z-index: -1;
 }
 
+/* Overlay gradient på hver karousellelement */
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -222,34 +226,39 @@ export default {
   background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
+/* Positionering og styling af karouselltekster */
 .carousel-caption {
   position: absolute;
-  bottom: 35%; /* Ændret fra top til bottom */
+  bottom: 35%;
   left: 50px;
   display: inline-block;
 }
 
+/* Stilen for tekstboksen til venstre i karousellen */
 .text-box-left {
   text-align: left;
   background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
   color: var(--gul);
   padding: 10px;
-  width: auto; /* Juster bredden automatisk */
-  max-width: 500px; /* Sæt en maksimal bredde */
+  width: auto;
+  max-width: 500px;
   border-radius: 5px;
 }
 
+/* Stilen for overskriften i tekstboksen */
 .text-box-left h3 {
-  font-size: 25px; /* Mindre skrifttype */
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
+/* Stilen for teksten i tekstboksen */
 .text-box-left p {
-  font-size: 16px; /* Mindre skrifttype */
+  font-size: 16px;
   line-height: 1.5;
 }
 
+/* Stilen for de 3 cards på forsiden */
 .card-home {
   margin-bottom: 1rem;
   margin-left: 1rem;
@@ -265,16 +274,16 @@ export default {
   text-align: left;
 }
 
+/* Hover-effekt for de 3 cards på forsiden */
 .card-home:hover {
   background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
-  color: var(--gul); /* Gul tekstfarve */
-
+  color: var(--gul);
 }
 
-
+/* Justering af karouselltekster for mindre skærme */
 @media (max-width: 980px) {
   .carousel-caption {
-    bottom: 10%; /* Flyt boksen længere ned i karusellen */
+    bottom: 10%;
   }
 }
 
