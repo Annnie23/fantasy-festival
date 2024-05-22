@@ -41,19 +41,21 @@
                 <div class="card-header"></div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    <img src="../assets/img/kort.png" alt="Logo" width="34" height="auto" style="pointer-events: none;">
-                    <br>
-                    <a href="https://www.google.com/maps/place/Esbjerg+Hovedbibliotek/@55.4835185,8.4252528,14z/data=!4m10!1m2!2m1!1sesbjerg+bibliotek!3m6!1s0x464b212b84d27037:0x9e9ee79cad51f7ea!8m2!3d55.4694654!4d8.4542328!15sChFlc2JqZXJnIGJpYmxpb3Rla5IBDnB1YmxpY19saWJyYXJ54AEA!16s%2Fg%2F11dzt5qgl1?entry=ttu"></a>
+                    <a href="https://www.google.com/maps/place/Esbjerg+Hovedbibliotek/@55.4835185,8.4252528,14z/data=!4m10!1m2!2m1!1sesbjerg+bibliotek!3m6!1s0x464b212b84d27037:0x9e9ee79cad51f7ea!8m2!3d55.4694654!4d8.4542328!15sChFlc2JqZXJnIGJpYmxpb3Rla5IBDnB1YmxpY19saWJyYXJ54AEA!16s%2Fg%2F11dzt5qgl1?entry=ttu">
+                    <img src="../assets/img/kort.png" alt="Logo" width="34" height="auto">
+                  </a>
+
                   </li>
                   <li class="list-group-item">
-                    <img src="../assets/img/instagram.png" alt="Logo" width="34" height="auto" style="pointer-events: none;">
-                    <br>
-                    <a href="https://www.instagram.com/fantasyfestivalen"></a>
+                    <a href="https://www.instagram.com/fantasyfestivalen">
+                    <img src="../assets/img/instagram.png" alt="Logo" width="34" height="auto" >
+                  </a>
                   </li>
+
                   <li class="list-group-item">
-                    <img src="../assets/img/facebook.png" alt="Logo" width="34" height="auto" style="pointer-events: none;">
-                    <br>
-                    <a href="https://www.facebook.com/fantasyfestivalen"></a>
+                    <a href="https://www.facebook.com/fantasyfestivalen">
+                    <img src="../assets/img/facebook.png" alt="Logo" width="34" height="auto" >
+                  </a>
                   </li>
                 </ul>
               </div>
