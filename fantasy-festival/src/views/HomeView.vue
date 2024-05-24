@@ -165,34 +165,30 @@
 <script>
 export default {
   mounted() {
-    // Opretter en IntersectionObserver for at observere, når elementer kommer ind i synsfeltet
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        // Hvis et element er synligt (intersecting)
         if (entry.isIntersecting) {
-          // Animerer elementet med klassen 'card-home' med flere keyframes
           anime({
             targets: '.card-home',
             keyframes: [
-              { translateX: [-1000, 0], opacity: [0, 1] }, // Flytter elementet fra -1000px til 0px og ændrer opacity fra 0 til 1
-              { translateX: [0, 50] }, // Flytter elementet fra 0px til 50px
-              { translateX: [50, -30] }, // Flytter elementet fra 50px til -30px
-              { translateX: [-30, 0] } // Flytter elementet fra -30px til 0px
+              { translateX: [-1000, 0], opacity: [0, 1] }, 
+              { translateX: [0, 50] }, 
+              { translateX: [50, -30] }, 
+              { translateX: [-30, 0] } 
             ],
-            easing: 'easeInOutQuad', // Angiver en easing-funktion for animationen
-            duration: 3000, // Varigheden af animationen i millisekunder
-            delay: anime.stagger(200) // Forsinker animationen for hver efterfølgende '.card-home'
+            easing: 'easeInOutQuad', 
+            duration: 3000, 
+            delay: anime.stagger(200) 
           });
 
-          // Stop med at observere elementet efter animationen
+          
           observer.unobserve(entry.target);
         }
       });
     }, {
-      threshold: 0.1 // Tærskel for, hvornår observeren udløses (10% synlighed)
+      threshold: 0.1 
     });
 
-    // Vælg alle elementer med klassen 'card-home' og begynd at observere dem
     document.querySelectorAll('.card-home').forEach((element) => {
       observer.observe(element);
     });
