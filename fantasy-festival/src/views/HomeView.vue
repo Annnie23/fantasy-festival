@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide3.jpg" alt="slide" class="d-block w-100">
+        <img src="../assets/img/lakse.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <div class="text-box-left">
             <h3>Mød Lakserytteren</h3>
@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="../assets/img/slide5.jpg" alt="slide" class="d-block w-100">
+        <img src="../assets/img/aften.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
           <div class="text-box-left">
             <h3>Onde magter vil herske</h3>
