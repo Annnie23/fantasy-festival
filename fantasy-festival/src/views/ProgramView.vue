@@ -15,6 +15,14 @@
       </p>
     </section>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          
+        </div>
+      </div>
+    </div>
+
     <div class="grid-container mb-5">
       <div v-for="item in filteredProgramItems" :key="item.id" class="card">
         <div class="card-wrapper">
