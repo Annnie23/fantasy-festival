@@ -14,6 +14,17 @@
           </div>
         </div>
       </div>
+        <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Velkommen til Fantasy Quest Esbjerg</h3>
+            <p>Her på siden finder du alle relevante informationer om årets Quest.
+              <br> Vælg imellem en svær aftenudgave eller en familievenlig dagudgave under Fantasyfestivalen.
+              <br>
+                <br>Vi glæder os til at se dig!
+            </p>
+          </div>
+        </div>
+
       <div class="carousel-item">
         <img src="../assets/img/slide2.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -26,6 +37,15 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Mød de fire kæmper</h3>
+            <p>Kæmperne er fire store, stærke og modige helte, som er udvalgt til at redde verden fra de onde magter.
+              <br>
+              <br>Deltag i årets Quest og hjælp dem!
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/lakse.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -38,6 +58,15 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Mød Lakserytteren</h3>
+            <p>Lakserytteren har i år været med til at skabe Fantasy Quest Esbjerg.
+              <br>
+                <br>Deltag i årets Quest og mød Lakserytteren!
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/slide4.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -50,6 +79,15 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Et magisk univers</h3>
+            <p>Du vil blive ført ind i et magisk univers, hvor monstre og mystiske væsner bor.
+              <br>
+                <br>Vi glæder os til at se dig!
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/aften.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -63,6 +101,16 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Onde magter vil herske</h3>
+            <p>Hjælp med at redde verden fra de onde magter.
+              <br>Hvis du ønsker mere uhygge og spænding, så vælg årets aftenquest.
+              <br>
+                <br>Vi glæder os til at se dig!
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/slide6.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -75,6 +123,15 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Lade musikken guide dig</h3>
+            <p>Du vil møde syngene og spilende væsner, som vil guide dig gennem Questen.
+              <br>
+                <br>Vi glæder os til at se dig!
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/slide7.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -88,6 +145,16 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Årets præmier</h3>
+            <p>Der vil være præmier til de bedste helte, som har klaret Questen.
+              <br>I år vil du både få ære, hæder og præmier.
+              <br>
+                <br>Der er både præmier til børn og voksne.
+            </p>
+          </div>
+        </div>
       <div class="carousel-item">
         <img src="../assets/img/slide8.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -101,6 +168,16 @@
           </div>
         </div>
       </div>
+      <div class="carousel-caption d-block d-md-none">
+          <div class="text-box-left-small">
+            <h3>Slip fantasien løs</h3>
+            <p>Vi hjælper dig med at slippe fantasien løs og leve dig ind i en anden verden.
+              <br>Tag familie og venner i hånden og få en oplevelse for livet.
+              <br>
+                <br>Vi glæder os til at se jer!
+            </p>
+          </div>
+        </div>
     </div>
 
 
@@ -168,19 +245,20 @@ export default {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          anime({
-            targets: '.card-home',
-            keyframes: [
-              { translateX: [-1000, 0], opacity: [0, 1] }, 
-              { translateX: [0, 50] }, 
-              { translateX: [50, -30] }, 
-              { translateX: [-30, 0] } 
-            ],
-            easing: 'easeInOutQuad', 
-            duration: 3000, 
-            delay: anime.stagger(200) 
-          });
-
+          if (window.innerWidth > 980) { // Hvis skærmbredden er større end 980px
+            anime({
+              targets: '.card-home',
+              keyframes: [
+                { translateX: [-1000, 0], opacity: [0, 1] }, 
+                { translateX: [0, 50] }, 
+                { translateX: [50, -30] }, 
+                { translateX: [-30, 0] } 
+              ],
+              easing: 'easeInOutQuad', 
+              duration: 3000, 
+              delay: anime.stagger(200) 
+            });
+          }
           
           observer.unobserve(entry.target);
         }
@@ -191,6 +269,22 @@ export default {
 
     document.querySelectorAll('.card-home').forEach((element) => {
       observer.observe(element);
+    });
+
+    // Tilføj no-animation klasse ved små skærmstørrelser
+    if (window.innerWidth <= 768) {
+      document.body.classList.add('no-animation');
+    } else {
+      document.body.classList.remove('no-animation');
+    }
+
+    // Tilføj event listener for vinduesændring
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 768) {
+        document.body.classList.add('no-animation');
+      } else {
+        document.body.classList.remove('no-animation');
+      }
     });
   }
 };
@@ -204,40 +298,35 @@ export default {
 .carousel {
   width: 100%;
   height: 100vh;
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100vh;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
 
-/* Overlay gradient på hver karouselbillede */
-.carousel-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+.carousel-item.active .carousel-caption {
+  opacity: 1; /* Show the caption on the active slide */
 }
 
-/* Positionering og styling af karouselltekster */
 .carousel-caption {
   position: absolute;
   bottom: 35%;
   left: 50px;
   display: inline-block;
+  width: 90%; /* Tilføj bredde for bedre justering på små skærme */
+  max-width: 500px;
+  text-align: left;
+  opacity: 0; /* Hide all captions */
+  transition: opacity 1s; /* Add a transition for the opacity property */
 }
 
-/* Stilen for tekstboksen til venstre i karousellen */
 .text-box-left {
-  text-align: left;
   background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
   color: var(--gul);
   padding: 10px;
-  width: auto;
-  max-width: 500px;
   border-radius: 5px;
 }
 
@@ -252,6 +341,25 @@ export default {
 .text-box-left p {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.text-box-left-small {
+  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+  color: var(--gul);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.text-box-left-small {
+  font-size: 14px;
+}
+
+.text-box-left-small h3 {
+  font-size: 18px;
+}
+
+.text-box-left-small p {
+  font-size: 12px;
 }
 
 /* Stilen for de 3 cards på forsiden */
@@ -280,11 +388,58 @@ export default {
 .card-home a{
   margin-bottom: 1rem;
 }
+/* Animation fjernet ved MQ fra 768px */
+.no-animation .card-home {
+  animation: none !important;
+}
+
+
+
+@media (max-width: 768px){
+  .card-home{
+    background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+    color: var(--gul);
+  }
+}
 
 /* Justering af karouselltekster for mindre skærme */
 @media (max-width: 980px) {
   .carousel-caption {
     bottom: 10%;
+    left: 20px; /* Juster for at passe bedre på små skærme */
+    width: 90%;
+  }
+  
+  .text-box-left {
+    padding: 5px;
+  }
+  
+  .text-box-left h3 {
+    font-size: 20px;
+  }
+  
+  .text-box-left p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 10%;
+    left: 10px; /* Juster for at passe bedre på meget små skærme */
+    width: calc(100% - 20px); /* Sørg for at teksten tilpasser sig skærmen */
+  }
+  
+  .text-box-left {
+    padding: 5px;
+  }
+  
+  .text-box-left h3 {
+    font-size: 18px;
+  }
+  
+  .text-box-left p {
+    font-size: 12px;
   }
 }
 
