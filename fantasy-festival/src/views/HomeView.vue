@@ -416,6 +416,7 @@ a:-webkit-any-link:hover {
   .card-home{
     background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
     color: var(--gul);
+
   }
 }
 
@@ -438,6 +439,12 @@ a:-webkit-any-link:hover {
   .text-box-left p {
     font-size: 14px;
   }
+
+  a:-webkit-any-link {
+    color: var(--gul);
+    cursor: pointer;
+    text-decoration: none;
+}
 }
 
 @media (max-width: 768px) {
