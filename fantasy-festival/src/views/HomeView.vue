@@ -203,41 +203,41 @@
       <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="card-home">
-            <a href="https://fantasyfestival.dk/">
               <img src="../assets/img/drage.png" alt="" width="auto" height="70">
-            </a>
+              <router-link to="/program">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Festival</h3>
               <p>Træd ind i det magiske univers, hvor monstre og mystiske væsner bor. Oplev spændende foredrag,
                 fantastiske koncerter, det bedste fantasylitteratur, uhyggelige aktiviteter og som noget helt nyt:
                 Fantasy Quest.</p>
             </div>
+          </router-link>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card-home">
-            <a href="https://fantasyfestival.dk/fantasy-quest-esbjerg">
               <img src="../assets/img/program.png" alt="" width="auto" height="70">
-            </a>
+              <router-link to="/quest">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Quest</h3>
               <p>Er du klar til at leve dig ind i en anden verden, en magisk historie, hvor du er helten, der er på en
                 "quest" for at overvinde de onde magter og redde hele verden? Så gør dig klar til Fantasy Quest Esbjerg.
               </p>
             </div>
+          </router-link>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card-home">
-            <a href="https://www.ticketmaster.dk/artist/fantasyfestival-billetter/1233494">
               <img src="../assets/img/quest.png" alt="" width="auto" height="70">
-            </a>
+              <a href="https://www.ticketmaster.dk/artist/fantasyfestival-billetter/1233494">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Billetter</h3>
               <p>Der er gratis adgang flere forskellige steder, men aktiviteter og foredrag kræver, at du køber et
                 aktivitetsarmbånd. Bliv klogere på, hvad der er gratis, hvad du kan bruge aktivitetsarmbåndet til, hvad
                 du gør med pladsreservation. </p>
             </div>
+          </a>
           </div>
         </div>
       </div>
@@ -380,6 +380,19 @@ margin-top: 1rem;
   color: var(--blåsort);
   border-radius: 5px;
   text-align: left;
+  
+}
+
+a:-webkit-any-link {
+    color: var(--blåsort);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:-webkit-any-link:hover {
+    color: var(--gul);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 /* Hover-effekt for de 3 cards på forsiden */
