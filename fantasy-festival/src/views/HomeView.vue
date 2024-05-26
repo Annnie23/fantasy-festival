@@ -13,7 +13,6 @@
             </p>
           </div>
         </div>
-      </div>
         <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Velkommen til Fantasy Quest Esbjerg</h3>
@@ -24,6 +23,7 @@
             </p>
           </div>
         </div>
+      </div>
 
       <div class="carousel-item">
         <img src="../assets/img/slide2.jpg" alt="slide" class="d-block w-100">
@@ -36,7 +36,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Mød de fire kæmper</h3>
@@ -46,6 +45,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/lakse.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -57,7 +58,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Mød Lakserytteren</h3>
@@ -67,6 +67,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/slide4.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -78,7 +80,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Et magisk univers</h3>
@@ -88,6 +89,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/aften.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -100,7 +103,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Onde magter vil herske</h3>
@@ -111,6 +113,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/slide6.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -122,7 +126,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Lade musikken guide dig</h3>
@@ -132,6 +135,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/slide7.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -144,7 +149,6 @@
             </p>
           </div>
         </div>
-      </div>
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Årets præmier</h3>
@@ -155,6 +159,8 @@
             </p>
           </div>
         </div>
+      </div>
+
       <div class="carousel-item">
         <img src="../assets/img/slide8.jpg" alt="slide" class="d-block w-100">
         <div class="carousel-caption d-none d-md-block">
@@ -167,7 +173,7 @@
             </p>
           </div>
         </div>
-      </div>
+      
       <div class="carousel-caption d-block d-md-none">
           <div class="text-box-left-small">
             <h3>Slip fantasien løs</h3>
@@ -178,6 +184,7 @@
             </p>
           </div>
         </div>
+      </div>
     </div>
 
 
@@ -245,20 +252,19 @@ export default {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          if (window.innerWidth > 980) { // Hvis skærmbredden er større end 980px
-            anime({
-              targets: '.card-home',
-              keyframes: [
-                { translateX: [-1000, 0], opacity: [0, 1] }, 
-                { translateX: [0, 50] }, 
-                { translateX: [50, -30] }, 
-                { translateX: [-30, 0] } 
-              ],
-              easing: 'easeInOutQuad', 
-              duration: 3000, 
-              delay: anime.stagger(200) 
-            });
-          }
+          anime({
+            targets: '.card-home',
+            keyframes: [
+              { translateX: [-1000, 0], opacity: [0, 1] }, 
+              { translateX: [0, 50] }, 
+              { translateX: [50, -30] }, 
+              { translateX: [-30, 0] } 
+            ],
+            easing: 'easeInOutQuad', 
+            duration: 3000, 
+            delay: anime.stagger(200) 
+          });
+
           
           observer.unobserve(entry.target);
         }
@@ -269,22 +275,6 @@ export default {
 
     document.querySelectorAll('.card-home').forEach((element) => {
       observer.observe(element);
-    });
-
-    // Tilføj no-animation klasse ved små skærmstørrelser
-    if (window.innerWidth <= 768) {
-      document.body.classList.add('no-animation');
-    } else {
-      document.body.classList.remove('no-animation');
-    }
-
-    // Tilføj event listener for vinduesændring
-    window.addEventListener('resize', () => {
-      if (window.innerWidth <= 768) {
-        document.body.classList.add('no-animation');
-      } else {
-        document.body.classList.remove('no-animation');
-      }
     });
   }
 };
@@ -307,6 +297,7 @@ export default {
   object-fit: cover;
 }
 
+
 .carousel-item.active .carousel-caption {
   opacity: 1; /* Show the caption on the active slide */
 }
@@ -319,8 +310,6 @@ export default {
   width: 90%; /* Tilføj bredde for bedre justering på små skærme */
   max-width: 500px;
   text-align: left;
-  opacity: 0; /* Hide all captions */
-  transition: opacity 1s; /* Add a transition for the opacity property */
 }
 
 .text-box-left {
@@ -362,7 +351,22 @@ export default {
   font-size: 12px;
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 0;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 0;
+}
+
 /* Stilen for de 3 cards på forsiden */
+
+.bg-green {
+margin-top: 1rem;
+}
+
 .card-home {
   margin-bottom: 1rem;
   margin-left: 1rem;

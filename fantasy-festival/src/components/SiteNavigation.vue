@@ -99,7 +99,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     transition: all 0.7s !important;
-    z-index: 1;
+    z-index: 5;
   
 }
 
@@ -182,7 +182,7 @@ a {
   .navbar-collapse .nav-item img {
     display: inline-block;
     transition: padding 0s !important; 
-    padding-left: 0;
+    padding-left: 10px;
     padding-top: 10px;
   }
     
@@ -199,5 +199,7 @@ a {
         font-size: medium;
     }
  }
+
+ 
 
 </style>
