@@ -27,7 +27,11 @@
 
     <div v-for="item in filteredProgramItems" :key="item.id" class="row py-3">
       <div class="col-lg-6 image-container">
-        <img class="img-fluid img-thumbnail" :src="item.image" :alt="item.title" />
+        <img
+          class="img-fluid img-thumbnail"
+          :src="item.image"
+          :alt="item.title"
+        />
         <div class="text-card">
           <h2>{{ item.title }}</h2>
           <p>
@@ -45,8 +49,8 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
-import getProgramItems from '@/modules/getProgram';
+import { ref, computed } from "vue";
+import getProgramItems from "@/modules/getProgram";
 
 const { programItems } = getProgramItems();
 
@@ -58,14 +62,13 @@ const filteredProgramItems = computed(() => programItems.value);
   margin-bottom: 20px;
 }
 
-.section{
-  color: var(--mørkeblå)
+.section {
+  color: var(--mørkeblå);
 }
 
 .image-container {
   position: relative;
 }
-
 
 .img-thumbnail {
   border: none;
@@ -76,7 +79,11 @@ const filteredProgramItems = computed(() => programItems.value);
   position: absolute;
   bottom: 30px;
   right: -450px;
-  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+  background: linear-gradient(
+    270deg,
+    rgba(80, 180, 165, 1) 0%,
+    rgba(14, 35, 66, 0.8576680672268908) 0%
+  );
   color: var(--gul); /* Text color */
   padding: 10px;
   border-radius: 10px;
@@ -87,37 +94,49 @@ const filteredProgramItems = computed(() => programItems.value);
 @media screen and (max-width: 1200px) {
   .text-card {
     position: absolute;
-  bottom: 30px;
-  right: -400px;
-  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
-  color: var(--gul); /* Text color */
-  padding: 10px;
-  border-radius: 10px;
-  width: calc(100% - 20px); /* Adjust width if necessary */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
-}
+    bottom: 30px;
+    right: -400px;
+    background: linear-gradient(
+      270deg,
+      rgba(80, 180, 165, 1) 0%,
+      rgba(14, 35, 66, 0.8576680672268908) 0%
+    );
+    color: var(--gul); /* Text color */
+    padding: 10px;
+    border-radius: 10px;
+    width: calc(100% - 20px); /* Adjust width if necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
+  }
 }
 
 @media screen and (max-width: 992px) {
   .text-card {
-  position: static;
-  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
-  color: var(--gul); /* Text color */
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%; /* Adjust width if necessary */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
+    position: static;
+    background: linear-gradient(
+      270deg,
+      rgba(80, 180, 165, 1) 0%,
+      rgba(14, 35, 66, 0.8576680672268908) 0%
+    );
+    color: var(--gul); /* Text color */
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%; /* Adjust width if necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
   }
 }
 @media screen and (max-width: 768px) {
   .text-card {
-  position: static;
-  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
-  color: var(--gul); /* Text color */
-  padding: 10px;
-  border-radius: 10px;
-  width: 100%; /* Adjust width if necessary */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
+    position: static;
+    background: linear-gradient(
+      270deg,
+      rgba(80, 180, 165, 1) 0%,
+      rgba(14, 35, 66, 0.8576680672268908) 0%
+    );
+    color: var(--gul); /* Text color */
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%; /* Adjust width if necessary */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for better visibility */
   }
 }
 

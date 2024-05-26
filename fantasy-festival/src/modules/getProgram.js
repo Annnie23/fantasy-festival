@@ -1,3 +1,8 @@
+/*  
+Denne kode/database definerer og eksporterer en funktion ved navn getProgramItems, 
+der har til formål at levere data om programmet til Questen på fantasy festival.
+*/
+
 
 import { ref } from 'vue'
 

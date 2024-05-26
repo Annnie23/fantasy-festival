@@ -95,7 +95,7 @@
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
-          src="../assets/img/slide5.jpg"
+          src="../assets/img/aften.jpg"
           alt=""
         />
       </div>
@@ -223,7 +223,7 @@
         <h6>
           Vi glæder os enormt meget til at byde velkommen til dette års store
           satsning på Fantasyfestival, nemlig Fantasy Quest Esbjerg. <br />
-          <br>
+          <br />
           <strong> Det bliver mega sjovt, anderledes og spændende. </strong>
         </h6>
       </div>
@@ -276,35 +276,25 @@
 </template>
 
 <script setup>
- import { ref, computed } from 'vue';
-  import getKarakterItems from '@/modules/getKarakter.js';
-  
-  const { karakterItems } = getKarakterItems();
-  
-  const filteredKarakterItems = computed(() => {
-    return karakterItems.value;
-  });
+import { ref, computed } from "vue";
+import getKarakterItems from "@/modules/getKarakter.js";
+
+const { karakterItems } = getKarakterItems();
+
+const filteredKarakterItems = computed(() => {
+  return karakterItems.value;
+});
 </script>
 
 <style scoped>
-/* Billedsektion */
-.image {
-  width: 100%;
-  height: 450px;
-  overflow: hidden;
+.col-lg-6 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.col-lg-6  {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.container{
-  color: var(--mørkeblå)
+.container {
+  color: var(--mørkeblå);
 }
 
 .text-card {
@@ -329,7 +319,6 @@
   border-radius: 10px;
 }
 
-
 @media screen and (max-width: 768px) {
   .text-card {
     width: 100%; /* Ændrer bredden til 100% på skærme mindre end 768px */
@@ -343,7 +332,6 @@
     padding: 15px; /* Tilpasser padding for mindre skærme */
   }
 }
-
 
 /* Knapper */
 button {
@@ -371,7 +359,9 @@ button:hover {
 
 .image-container {
   position: relative;
-  width: calc(25% - 20px); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
+  width: calc(
+    25% - 20px
+  ); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
   margin: 10px;
   overflow: hidden;
 }
@@ -383,9 +373,9 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
-.img-thumbnail{
-   border: none;
-   border-radius: 10px;
+.img-thumbnail {
+  border: none;
+  border-radius: 10px;
 }
 
 .overlay {
@@ -394,7 +384,11 @@ button:hover {
   left: 0;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+  background: linear-gradient(
+    270deg,
+    rgba(80, 180, 165, 1) 0%,
+    rgba(14, 35, 66, 0.8576680672268908) 0%
+  );
   text-align: center;
   opacity: 0;
   transition: bottom 0.3s ease, opacity 0.3s ease;
@@ -417,7 +411,9 @@ button:hover {
 /* Medierækkevidder for responsivitet */
 @media screen and (max-width: 768px) {
   .image-container {
-    width: calc(50% - 20px); /* To billeder pr. række på skærme, der er mindre end 768px brede */
+    width: calc(
+      50% - 20px
+    ); /* To billeder pr. række på skærme, der er mindre end 768px brede */
   }
   .overlay {
     position: absolute;
@@ -425,7 +421,11 @@ button:hover {
     left: 0;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+    background: linear-gradient(
+      270deg,
+      rgba(80, 180, 165, 1) 0%,
+      rgba(14, 35, 66, 0.8576680672268908) 0%
+    );
     text-align: center;
     opacity: 1;
     transition: none;
@@ -443,7 +443,9 @@ button:hover {
 
 @media screen and (max-width: 480px) {
   .image-container {
-    width: calc(100% - 20px); /* Et billede pr. række på skærme, der er mindre end 480px brede */
+    width: calc(
+      100% - 20px
+    ); /* Et billede pr. række på skærme, der er mindre end 480px brede */
   }
 
   .overlay {
@@ -452,7 +454,11 @@ button:hover {
     left: 0;
     width: 100%;
     padding: 10px;
-    background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
+    background: linear-gradient(
+      270deg,
+      rgba(80, 180, 165, 1) 0%,
+      rgba(14, 35, 66, 0.8576680672268908) 0%
+    );
     text-align: center;
     opacity: 1;
     transition: none;
@@ -467,5 +473,4 @@ button:hover {
     transform: none; /* Disable zoom effect on smaller screens */
   }
 }
-
 </style>
