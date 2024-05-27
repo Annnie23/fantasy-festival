@@ -158,13 +158,17 @@ export default {};
 @media (max-width: 768px) {
   .card-body {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     max-height: 600px;
     align-items: center;
   }
   .footer a {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  .footer p {
+    font-size: 14px;
   }
 }
 </style>

@@ -120,6 +120,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .navbar {
   background-color: transparent !important;
   margin: 0 auto;
@@ -128,6 +129,18 @@ export default {
   align-items: center;
   transition: all 0.7s !important;
   z-index: 1;
+=======
+
+.navbar { 
+    background-color: transparent !important;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.7s !important;
+    z-index: 5;
+  
+>>>>>>> bb1296c3503a1f7739c53dbdd425af474fe6917b
 }
 
 .navbar.navbar-scrolled {
@@ -198,8 +211,13 @@ a {
   .navbar-collapse .nav-item span,
   .navbar-collapse .nav-item img {
     display: inline-block;
+<<<<<<< HEAD
     transition: padding 0s !important;
     padding-left: 0;
+=======
+    transition: padding 0s !important; 
+    padding-left: 10px;
+>>>>>>> bb1296c3503a1f7739c53dbdd425af474fe6917b
     padding-top: 10px;
   }
 }
@@ -210,9 +228,21 @@ a {
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1100px) {
   .nav-item span {
     font-size: medium;
   }
 }
 </style>
+=======
+ @media screen and (max-width: 1100px){
+    .nav-item span {
+        font-size: medium;
+    }
+ }
+
+ 
+
+</style>
+>>>>>>> bb1296c3503a1f7739c53dbdd425af474fe6917b
