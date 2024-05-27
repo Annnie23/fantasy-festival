@@ -413,7 +413,7 @@ margin-top: 1rem;
   color: var(--blåsort);
   border-radius: 5px;
   text-align: left;
-  
+  cursor: pointer;
 }
 
 a:-webkit-any-link {

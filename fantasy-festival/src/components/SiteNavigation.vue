@@ -167,6 +167,7 @@ a {
   align-items: center;
   transition: flex-direction 1s;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 .nav-item span {
