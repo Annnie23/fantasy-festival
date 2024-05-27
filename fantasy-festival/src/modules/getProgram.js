@@ -1,6 +1,10 @@
 /*  
-Denne kode/database definerer og eksporterer en funktion ved navn getProgramItems, 
-der har til formål at levere data om programmet til Questen på fantasy festival.
+Dette er en snyde database
+En database er en samling af data, som er organiseret på en sådan måde, at det er nemt at hente og opdatere data.
+Dette gør at man kun skal opdatere data ét sted, og så vil det blive opdateret alle steder, hvor dataen bliver brugt.
+Denne database, der er designet til at blive brugt i en Vue.js-applikation, 
+hvor den håndterer en liste af programItems, hver med et unikt id, billede, titel, beskrivelse, dato, tidspunkt, link og linktekst.
+
 */
 
 
@@ -8,7 +12,7 @@ import { ref } from 'vue'
 
 import image1 from '../assets/img/aften.jpg'
 import image2 from '../assets/img/slide1.jpg'
-import image3 from '../assets/img/lakse.jpg'
+import image3 from '../assets/img/lakse.png'
 
 const getProgramItems = () => {
     const programItems = ref([

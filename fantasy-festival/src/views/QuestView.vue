@@ -6,53 +6,36 @@
       alt=""
     />
   </div>
+
   <div class="container">
-    <div class="row py-5">
-      <div class="col-md-12">
-        <h1 class="text-4xl font-bold text-start py-6">
-          Fantasy Quest Esbjerg
-        </h1>
-        <h3>
-          Er du klar til at træde ind i en verden fyldt med magi og eventyr?
+    <section variant="dynamic-xp">
+      <h1 class="text-3xl font-bold text-start py-5">
+        Velkommen til Fantasy Quest Esbjerg - hvor fantasi bliver til
+        virkelighed.
+      </h1>
+      <h4 class="py-2">
+        Er du klar til at træde ind i en verden fyldt med magi og eventyr?
           <br />
           Tag rollen som helten i din egen episke "quest" for at besejre de
           mørke kræfter og redde hele verden!
-        </h3>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row py-3">
-      <div class="col-md-12">
-        <h2>
-          <strong>
-            Velkommen til Fantasy Quest Esbjerg - hvor fantasi bliver til
-            virkelighed.
-          </strong>
-        </h2>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row py-3">
-      <div class="col-md-12">
-        <p>
+      </h4>
+      <p class="py-1">
           Forestil dig ”Fangerne på Fortet” tilsat en masse magi, noget teater
           og rollespil, nogle helte og skurke og selvfølgelig kampen mellem det
           gode og det onde, så er du godt på vej til Fantasy Quest Esbjerg.
         </p>
-        <p>
+        <p class="py-1">
           Fantasy Quest Esbjerg får i 2024 både en svær aftenudgave og en
           familievenlig udgave i dagstimerne under Fantasyfestivalen, der er
           skrevet i samarbejde med YouTuberen Lakserytteren, hvor alle kan være
           med.
         </p>
-        <h5>
+        <h5 class="py-2">
           Har du lyst til lidt større udfordringer, så skrues sværhedsgraden op,
           når tusmørket lægger sig over Esbjergs gader.
         </h5>
-      </div>
-    </div>
+    </section>
+    
   </div>
 
   <div class="container">
@@ -235,7 +218,7 @@
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
-          src="../assets/img/slide3.jpg"
+          src="../assets/img/lakse.png"
           alt=""
         />
       </div>
@@ -263,7 +246,7 @@
   <div class="container">
     <div class="row py-3"></div>
     <h1>Mød årets helte og skurke</h1>
-    <p>Kør musen over den enkelte figur, for at læse mere</p>
+    <p class="hidden">Kør musen over den enkelte figur, for at læse mere</p>
     <div class="gallery">
       <div v-for="item in karakterItems" :key="item.id" class="image-container">
         <img :src="item.image" :alt="'Billede af ' + item.title" />
@@ -415,29 +398,45 @@ button:hover {
       50% - 20px
     ); /* To billeder pr. række på skærme, der er mindre end 768px brede */
   }
+  
+  .text-card {
+    width: 100%; /* Ændrer bredden til 100% på skærme mindre end 768px */
+    margin: 0; /* Fjerner margen for at undgå overlapning */
+    border-radius: 10px; /* Fjerner border-radius for at undgå overlapning */
+  }
+
   .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 60px; /* Sætter maksimal højde til 60px */
+    display: flex; /* Brug flexbox */
+    justify-content: center; /* Centrerer vandret */
+    align-items: center; /* Centrerer lodret */
     padding: 10px;
     background: linear-gradient(
       270deg,
       rgba(80, 180, 165, 1) 0%,
       rgba(14, 35, 66, 0.8576680672268908) 0%
     );
-    text-align: center;
+    text-align: center; /* Centrere tekst */
     opacity: 1;
     transition: none;
   }
 
   .overlay p {
     color: var(--gul);
-    font-size: 20px;
+    font-size: 16px; /* Mindre tekststørrelse for bedre pasform */
+    margin: 0; /* Fjerner margin for at undgå overlapning */
   }
 
   .image-container img {
     transform: none; /* Disable zoom effect on smaller screens */
+  }
+
+  .hidden {
+    display: none;
   }
 }
 
@@ -448,6 +447,10 @@ button:hover {
     ); /* Et billede pr. række på skærme, der er mindre end 480px brede */
   }
 
+  .hidden{
+    display: none;
+  }
+
   .overlay {
     position: absolute;
     bottom: 0;
@@ -460,8 +463,10 @@ button:hover {
       rgba(14, 35, 66, 0.8576680672268908) 0%
     );
     text-align: center;
+    text-justify: center;
     opacity: 1;
     transition: none;
+    max-height: 60px;
   }
 
   .overlay p {

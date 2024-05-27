@@ -1,4 +1,8 @@
-/* Det her er en database, der er designet til at blive brugt i en Vue.js-applikation, 
+/* Dette er en snyde database
+En database er en samling af data, som er organiseret på en sådan måde, at det er nemt at hente og opdatere data.
+Dette gør at man kun skal opdatere data ét sted, og så vil det blive opdateret alle steder, hvor dataen bliver brugt.
+
+Det her er en database, der er designet til at blive brugt i en Vue.js-applikation, 
 hvor den håndterer en liste af karakterer, hver med et unikt id, billede, alternativ tekst (alt), 
 og titel. Når funktionen getKarakterItems kaldes, returnerer den den reaktive listen karakterItems, 
 som kan bruges i komponenter til at vise karaktererne og deres billeder dynamisk.
@@ -24,7 +28,7 @@ import image3 from '../assets/img/figurer/Gygaz.png'
 import image4 from '../assets/img/figurer/Havfruedronning.png'
 import image5 from '../assets/img/figurer/Malice.png'
 import image6 from '../assets/img/figurer/Portal.png'
-import image7 from '../assets/img/figurer/Vogterkæmper.png'
+import image7 from '../assets/img/figurer/Untitled-1.png'
 /* Import image, importerer billeder fra assets mappen ind i koden. 
 Når man benytter import image, kan man gøre selve stien til billedet dynamisk,
 hvilket gør det nemmere at tilføje eller fjerne billeder fra databasen. 

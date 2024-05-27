@@ -53,7 +53,7 @@
       </div>
 
       <div class="carousel-item">
-        <img src="../assets/img/lakse.jpg" alt="slide" class="d-block w-100" />
+        <img src="../assets/img/lakse-karousel.png" alt="slide" class="d-block w-100" />
         <div class="carousel-caption d-none d-md-block">
           <div class="text-box-left">
             <h3>Mød Lakserytteren</h3>
