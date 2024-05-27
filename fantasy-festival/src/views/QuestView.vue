@@ -249,7 +249,10 @@
     <p class="hidden">Kør musen over den enkelte figur, for at læse mere</p>
     <div class="gallery">
     <div v-for="item in karakterItems" :key="item.id" 
-         :class="['image-container', item.id === 6 ? 'double-column' : '']">
+    :class="['image-container', 
+                    item.id === 6 ? 'double-column' : '',
+                    item.id === 6 ? 'order-6' : '',
+                    item.id === 7 ? 'order-7' : '']">
       <img :src="item.image" :alt="'Billede af ' + item.title" />
       <div class="overlay">
         <p>{{ item.title }}</p>
@@ -338,7 +341,7 @@ button:hover {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .image-container {
@@ -451,52 +454,40 @@ button:hover {
   .double-column {
     width: 100%; /* Full width on smaller screens */
   }
+  .order-6 { order: 7; }
+  .order-7 { order: 6; }
 }
 
 @media screen and (max-width: 480px) {
   .image-container {
-    width: calc(
-      100% - 20px
-    ); /* Et billede pr. række på skærme, der er mindre end 480px brede */
+    width: calc(50% - 10px); /* To billeder pr. række på skærme mindre end 480px brede */
+    margin: 5px; /* Mindre margin for at få plads til to billeder pr. række */
   }
 
-  .hidden{
-    display: none;
+  .double-column {
+    width: calc(100% - 20px); /* Fylder hele rækken */
+    margin: 8px 0; 
   }
+
+  .order-6 { order: 7; }
+  .order-7 { order: 6; }
 
   .overlay {
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background: linear-gradient(
-      270deg,
-      rgba(80, 180, 165, 1) 0%,
-      rgba(14, 35, 66, 0.8576680672268908) 0%
-    );
-    text-align: center;
-    text-justify: center;
     opacity: 1;
-    transition: none;
-    max-height: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .overlay p {
-    color: var(--gul);
-    font-size: 20px;
+    font-size: 14px;
   }
 
   .image-container img {
     transform: none; /* Disable zoom effect on smaller screens */
   }
-  .image-container {
-    width: calc(100% - 20px); /* One image per row on smallest screens */
-  }
-
-  .double-column {
-    width: 100%; /* Full width on smallest screens */
-  }
-
 }
+
 </style>
