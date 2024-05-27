@@ -22,13 +22,12 @@ import { ref } from 'vue'
 ref er en funktion, der gør det muligt at oprette reaktive dataobjekter i en Vue 3-komponent.
 Når du bruger ref, kan Vue automatisk spore ændringer i den refererede data og opdatere UI-komponenter, der afhænger af disse data. */
 
-import image1 from '../assets/img/figurer/Arkivaren.png'
-import image2 from '../assets/img/figurer/Gnist.png'
-import image3 from '../assets/img/figurer/Gygaz.png'
-import image4 from '../assets/img/figurer/Havfruedronning.png'
-import image5 from '../assets/img/figurer/Malice.png'
-import image6 from '../assets/img/figurer/Portal.png'
-import image7 from '../assets/img/figurer/Untitled-1.png'
+import image1 from '../assets/img/figurer/Arkivaren.jpg'
+import image2 from '../assets/img/figurer/Gnist.jpg'
+import image3 from '../assets/img/figurer/Gygaz.jpg'
+import image4 from '../assets/img/figurer/Havfruedronning.jpg'
+import image5 from '../assets/img/figurer/Malice.jpg'
+import image6 from '../assets/img/figurer/Portal.jpg'
 /* Import image, importerer billeder fra assets mappen ind i koden. 
 Når man benytter import image, kan man gøre selve stien til billedet dynamisk,
 hvilket gør det nemmere at tilføje eller fjerne billeder fra databasen. 
@@ -72,12 +71,6 @@ const getKarakterItems = () => {
         {
           id: 6,
           image: image6,
-          alt: 'Portalen til en anden verden',
-          title: 'Portalen til en anden verden',
-        },
-        {
-          id: 7,
-          image: image7,
           alt: 'De fire vogterkæmpere',
           title: 'De fire vogterkæmpere',
         },
