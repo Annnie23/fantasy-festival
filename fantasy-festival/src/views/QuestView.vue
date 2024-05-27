@@ -248,13 +248,14 @@
     <h1>Mød årets helte og skurke</h1>
     <p class="hidden">Kør musen over den enkelte figur, for at læse mere</p>
     <div class="gallery">
-      <div v-for="item in karakterItems" :key="item.id" class="image-container">
-        <img :src="item.image" :alt="'Billede af ' + item.title" />
-        <div class="overlay">
-          <p>{{ item.title }}</p>
-        </div>
+    <div v-for="item in karakterItems" :key="item.id" 
+         :class="['image-container', item.id === 6 ? 'double-column' : '']">
+      <img :src="item.image" :alt="'Billede af ' + item.title" />
+      <div class="overlay">
+        <p>{{ item.title }}</p>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -342,12 +343,17 @@ button:hover {
 
 .image-container {
   position: relative;
-  width: calc(
-    25% - 20px
-  ); /* Beregning for at have maksimalt 4 billeder pr. række med en margin på 10px på hver side */
+  width: calc(25% - 20px); /* Adjusted for 4 columns with margin */
   margin: 10px;
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
+
+.double-column {
+  width: calc(50% - 20px); /* Adjusted for 2 columns with margin */
+}
+
+
 
 .image-container img {
   width: 100%;
@@ -398,7 +404,7 @@ button:hover {
       50% - 20px
     ); /* To billeder pr. række på skærme, der er mindre end 768px brede */
   }
-  
+
   .text-card {
     width: 100%; /* Ændrer bredden til 100% på skærme mindre end 768px */
     margin: 0; /* Fjerner margen for at undgå overlapning */
@@ -437,6 +443,13 @@ button:hover {
 
   .hidden {
     display: none;
+  }
+   .image-container {
+    width: calc(50% - 20px); /* Two images per row on smaller screens */
+  }
+
+  .double-column {
+    width: 100%; /* Full width on smaller screens */
   }
 }
 
@@ -477,5 +490,13 @@ button:hover {
   .image-container img {
     transform: none; /* Disable zoom effect on smaller screens */
   }
+  .image-container {
+    width: calc(100% - 20px); /* One image per row on smallest screens */
+  }
+
+  .double-column {
+    width: 100%; /* Full width on smallest screens */
+  }
+
 }
 </style>

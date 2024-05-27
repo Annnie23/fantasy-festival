@@ -27,7 +27,8 @@ import image2 from '../assets/img/figurer/Gnist.jpg'
 import image3 from '../assets/img/figurer/Gygaz.jpg'
 import image4 from '../assets/img/figurer/Havfruedronning.jpg'
 import image5 from '../assets/img/figurer/Malice.jpg'
-import image6 from '../assets/img/figurer/Portal.jpg'
+import image6 from '../assets/img/figurer/vk.jpg'
+import image7 from '../assets/img/figurer/Portal.jpg'
 /* Import image, importerer billeder fra assets mappen ind i koden. 
 Når man benytter import image, kan man gøre selve stien til billedet dynamisk,
 hvilket gør det nemmere at tilføje eller fjerne billeder fra databasen. 
@@ -73,6 +74,12 @@ const getKarakterItems = () => {
           image: image6,
           alt: 'De fire vogterkæmpere',
           title: 'De fire vogterkæmpere',
+        },
+        {
+          id: 7,
+          image: image7,
+          alt: 'Portalen til en anden verden',
+          title: 'Portalen til en anden verden',
         },
         
     ])
