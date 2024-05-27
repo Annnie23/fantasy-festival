@@ -135,6 +135,7 @@ export default {
 .navbar.navbar-scrolled {
   background-color: var(--blåsort) !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  max-height: 135px;
 }
 
 .navbar-brand {

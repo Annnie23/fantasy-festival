@@ -336,9 +336,9 @@ export default {
 }
 
 .carousel-caption {
-  position: absolute;
-  bottom: 35%;
-  left: 50px;
+  position: sticky;
+  bottom: 30%;
+  left: 100px;
   display: inline-block;
   width: 90%; /* Tilføj bredde for bedre justering på små skærme */
   max-width: 500px;
@@ -460,6 +460,7 @@ a:-webkit-any-link:hover {
 /* Justering af karouselltekster for mindre skærme */
 @media (max-width: 980px) {
   .carousel-caption {
+    
     bottom: 10%;
     left: 20px; /* Juster for at passe bedre på små skærme */
     width: 90%;
@@ -486,6 +487,7 @@ a:-webkit-any-link:hover {
 
 @media (max-width: 768px) {
   .carousel-caption {
+    position: absolute;
     bottom: 10%;
     left: 10px; /* Juster for at passe bedre på meget små skærme */
     width: calc(100% - 20px); /* Sørg for at teksten tilpasser sig skærmen */

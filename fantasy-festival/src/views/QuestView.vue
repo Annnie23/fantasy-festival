@@ -323,7 +323,7 @@ const filteredKarakterItems = computed(() => {
 /* Knapper */
 button {
   font-family: monospace;
-  background-color: var(--mørkeblå);
+  background: rgb(14, 35, 66);
   color: var(--gul);
   border: none;
   border-radius: 8px;
@@ -333,7 +333,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--blå);
+  background-color: var(--mørkeblå);
   box-shadow: 0 0 0 2px #023a6b;
   color: var(--orange);
 }
