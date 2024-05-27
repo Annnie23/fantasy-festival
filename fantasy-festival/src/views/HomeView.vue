@@ -228,6 +228,7 @@
             <a href="https://fantasyfestival.dk/">
               <img src="../assets/img/drage.png" alt="" width="auto" height="70">
             </a>
+            <router-link to="/program">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Festival</h3>
               <p>
@@ -245,6 +246,7 @@
             <a href="https://fantasyfestival.dk/fantasy-quest-esbjerg">
               <img src="../assets/img/program.png" alt="" width="auto" height="70">
             </a>
+            <router-link to="/quest">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Quest</h3>
               <p>
@@ -271,7 +273,6 @@
                 aktivitetsarmbåndet til, hvad du gør med pladsreservation.
               </p>
             </div>
-          </a>
           </div>
         </div>
       </div>
@@ -345,16 +346,7 @@ export default {
 }
 
 .text-box-left {
-<<<<<<< HEAD
-  text-align: left;
-  background: linear-gradient(
-    270deg,
-    rgba(80, 180, 165, 1) 0%,
-    rgba(14, 35, 66, 0.8576680672268908) 0%
-  );
-=======
   background: linear-gradient(270deg, rgba(80,180,165,1) 0%, rgba(14,35,66,0.8576680672268908) 0%);
->>>>>>> bb1296c3503a1f7739c53dbdd425af474fe6917b
   color: var(--gul);
   padding: 10px;
   border-radius: 5px;
