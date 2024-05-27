@@ -2,27 +2,31 @@
   <div class="image">
     <img
       class="img-fluid d-block w-100"
-      src="../assets/img/slide2.jpg"
-      alt="Slide Image"
+      src="../assets/img/header.png"
+      alt=""
     />
   </div>
   <div class="container">
     <section variant="dynamic-xp">
-      <h2 class="fw-bolder">Program</h2>
-      <p>
-        Er du klar til at leve dig ind i en anden verden, en magisk historie,
-        hvor du er helten, der er på en "quest" for at overvinde de onde magter
+      <h1 class="text-4xl font-bold text-start py-4">
+        Program for Fantasy Quest Esbjerg
+        </h1>
+        <h4 class="py-2">
+          Er du klar til at leve dig ind i en anden verden, en magisk historie,
+        hvor du er helten, der er på en quest for at overvinde de onde magter
         og redde hele verden?
-        <br />
-        Så gør dig klar til Fantasy Quest Esbjerg.
-      </p>
-      <p>
+          <br />
+          Så gør dig klar til Fantasy Quest Esbjerg.
+        </h4>
+        <p class="py-1">
         <strong>
           Fantasy Quest Esbjerg får i 2024 både en svær aftenudgave og en
           familievenlig dagudgave under Fantasyfestivalen, som er skabt i
           samarbejde med YouTuberen Lakserytteren.
         </strong>
       </p>
+
+    
     </section>
 
     <div v-for="item in filteredProgramItems" :key="item.id" class="row py-3">
@@ -62,7 +66,7 @@ const filteredProgramItems = computed(() => programItems.value);
   margin-bottom: 20px;
 }
 
-.section {
+.container {
   color: var(--mørkeblå);
 }
 
@@ -79,11 +83,8 @@ const filteredProgramItems = computed(() => programItems.value);
   position: absolute;
   bottom: 30px;
   right: -450px;
-  background: linear-gradient(
-    270deg,
-    rgba(80, 180, 165, 1) 0%,
-    rgba(14, 35, 66, 0.8576680672268908) 0%
-  );
+  background: rgb(14, 35, 66);
+  opacity: 97%;
   color: var(--gul); /* Text color */
   padding: 10px;
   border-radius: 10px;
@@ -96,11 +97,8 @@ const filteredProgramItems = computed(() => programItems.value);
     position: absolute;
     bottom: 30px;
     right: -400px;
-    background: linear-gradient(
-      270deg,
-      rgba(80, 180, 165, 1) 0%,
-      rgba(14, 35, 66, 0.8576680672268908) 0%
-    );
+    background: rgb(14, 35, 66);
+    opacity: 97%;
     color: var(--gul); /* Text color */
     padding: 10px;
     border-radius: 10px;
@@ -112,11 +110,8 @@ const filteredProgramItems = computed(() => programItems.value);
 @media screen and (max-width: 992px) {
   .text-card {
     position: static;
-    background: linear-gradient(
-      270deg,
-      rgba(80, 180, 165, 1) 0%,
-      rgba(14, 35, 66, 0.8576680672268908) 0%
-    );
+    background: rgb(14, 35, 66);
+    opacity: 97%;
     color: var(--gul); /* Text color */
     padding: 10px;
     border-radius: 10px;
@@ -127,11 +122,7 @@ const filteredProgramItems = computed(() => programItems.value);
 @media screen and (max-width: 768px) {
   .text-card {
     position: static;
-    background: linear-gradient(
-      270deg,
-      rgba(80, 180, 165, 1) 0%,
-      rgba(14, 35, 66, 0.8576680672268908) 0%
-    );
+    background: rgb(14, 35, 66);
     color: var(--gul); /* Text color */
     padding: 10px;
     border-radius: 10px;
@@ -148,7 +139,7 @@ const filteredProgramItems = computed(() => programItems.value);
 
 button {
   font-family: monospace;
-  background-color: var(--mørkeblå);
+  background: rgb(14, 35, 66);
   color: var(--gul);
   border: none;
   border-radius: 8px;
@@ -158,7 +149,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--blå);
+  background-color: var(--mørkeblå);
   box-shadow: 0 0 0 2px #023a6b;
   color: var(--orange);
 }
