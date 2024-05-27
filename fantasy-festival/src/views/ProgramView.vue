@@ -2,7 +2,7 @@
   <div class="image">
     <img
       class="img-fluid d-block w-100"
-      src="../assets/img/header.png"
+      src="../assets/img/hero1.jpg"
       alt=""
     />
   </div>
