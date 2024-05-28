@@ -1,4 +1,5 @@
 <template>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" charset="utf-8" />
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container-fluid">

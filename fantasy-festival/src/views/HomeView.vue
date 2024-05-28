@@ -1,4 +1,6 @@
 <template>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" charset="utf-8" />
+
   <div id="demo" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">

@@ -1,44 +1,58 @@
+/* Import af dejavu-serifbook font */
 @font-face {
-  font-family: 'CustomFont';
-  src: url(''grid_12-825-55-15.css') format('woff');
+  font-family: "dejavu_serifbook";
+  src: url("DejaVuSerif-webfont.eot");
+  src:
+    url("DejaVuSerif-webfont.eot?#iefix") format("embedded-opentype"),
+    url("DejaVuSerif-webfont.woff2") format("woff2"),
+    url("DejaVuSerif-webfont.woff") format("woff"),
+    url("DejaVuSerif-webfont.ttf") format("truetype"),
+    url("DejaVuSerif-webfont.svg#dejavu_serifbook") format("svg");
   font-weight: normal;
   font-style: normal;
 }
+p {font-family: "dejavu_serifbook";}
 
-body {
-  font-family: 'CustomFont', sans-serif;
-}
+h1 {font-family: "dejavu_serifbook";}
 
+h2 {font-family: "dejavu_serifbook";}
+
+h3 {font-family: "dejavu_serifbook";}
+
+h4 {font-family: "dejavu_serifbook";}
+
+h5 {font-family: "dejavu_serifbook";}
+
+h6 {font-family: "dejavu_serifbook";}
+
+a {font-family: "dejavu_serifbook";}
+
+span {font-family: "dejavu_serifbook";}
 
 
 
 :root {
-  --gul: #F5C842;
-  --orange: #F2B63D;
-  --blå: #0465BA;
-  --mørkeblå: #023A6B;
-  --blåsort: #0E2342;
+  --gul: #f5c842;
+  --orange: #f2b63d;
+  --blå: #0465ba;
+  --mørkeblå: #023a6b;
+  --blåsort: #0e2342;
 }
 
 .body {
- 
-  
   margin: 0;
   padding: 0;
   display: flex;
   color: var(--mørkeblå);
 }
 
-
-
 .bg-green {
   margin-top: 100vh;
   padding-top: 20px;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .bg-green {
     margin-top: 50vh;
   }
-  
 }

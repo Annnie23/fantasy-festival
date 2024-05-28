@@ -1,4 +1,5 @@
 <template>
+    <link rel="stylesheet" href="../assets/main.css" type="text/css" charset="utf-8" />
   <div class="image">
     <img
       class="img-fluid d-block w-100"
