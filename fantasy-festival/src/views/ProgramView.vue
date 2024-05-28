@@ -139,7 +139,6 @@ const filteredProgramItems = computed(() => programItems.value);
 }
 
 button {
-  font-family: monospace;
   background: rgb(14, 35, 66);
   color: var(--gul);
   border: none;
