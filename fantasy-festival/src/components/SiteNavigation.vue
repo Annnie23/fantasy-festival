@@ -20,6 +20,7 @@
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          @click="toggleBurgerMenu"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -116,8 +117,21 @@ export default {
         });
       }
     });
+
+    document.addEventListener("click", (event) => {
+      const burgerMenuButton = document.querySelector(".navbar-toggler");
+      if (!burgerMenuButton.contains(event.target) && !navCollapseEl.contains(event.target)) {
+        burgerMenuButton.classList.remove("active");
+      }
+    });
   },
-};
+  methods: {
+    toggleBurgerMenu() {
+      const burgerMenuButton = document.querySelector(".navbar-toggler");
+      burgerMenuButton.classList.toggle("active");
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -150,6 +164,18 @@ export default {
 
 .navbar-nav {
   margin-left: auto;
+}
+.navbar-collapse.show {
+  position: absolute; /* or 'fixed' */
+  top: 70%; /* position it right below the navbar */
+  right: 0; /* align it to the left */
+  z-index: 1000; /* adjust as needed to ensure it's on top of other elements */
+  border: 2px solid var(--orange);
+  background-color: var(--blåsort);
+  padding: 10px;
+  border-radius: 5px;
+  width: 50%; /* make it span the full width of the viewport */
+  color:var(--gul)
 }
 
 span {
