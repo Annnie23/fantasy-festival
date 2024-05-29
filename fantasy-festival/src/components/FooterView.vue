@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-              <div class="widget">
+              <div class="widget lidt-godt">
                 <h4 class="widget-title mb-4">Informationer</h4>
                 <ul class="list-unstyled">
                   <li class="mb-2">
@@ -299,6 +299,10 @@ footer a {
   .footer .widget p,
   .footer .widget a {
     font-size: 0.8rem; /* Reduce font size */
+  }
+
+  .footer .col-12.widget .lidt-godt{
+    color: red;
   }
 
   .footer .widget img {
