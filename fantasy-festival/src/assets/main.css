@@ -30,7 +30,7 @@ a {font-family: "dejavu_serifbook";}
 span {font-family: "dejavu_serifbook";}
 
 
-
+/* Farver vi har benyttet i alle koder, de er fremkaldt med var(--xxx) */
 :root {
   --gul: #f5c842;
   --orange: #f2b63d;
@@ -39,6 +39,7 @@ span {font-family: "dejavu_serifbook";}
   --blåsort: #0e2342;
 }
 
+/* gennerel opstilling af siderne */
 .body {
   margin: 0;
   padding: 0;
@@ -46,6 +47,7 @@ span {font-family: "dejavu_serifbook";}
   color: var(--mørkeblå);
 }
 
+/* Klasse der kan bruges for at benytte stil arten */
 .bg-green {
   margin-top: 100vh;
   padding-top: 20px;

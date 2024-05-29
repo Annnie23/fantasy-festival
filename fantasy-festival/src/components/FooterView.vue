@@ -1,23 +1,35 @@
+<!-- 
+  Denne kode definerer footeren, og inkluderer information om begivenheden Fantasyfestivalen i Esbjerg.
+  Footeren starter ved billedet som er en illustration af alle figurerne fra Fantasyfestival Questen.
+  Footeren er opdelt i to dele, den øverste del indeholder information om festivalen, hvor de forskellige links refererer til forskellige informationer om festivalen.
+  Den nederste del indeholder copyright og iconer med links til fantasyfestival Esbjergs sociale medier, 
+  samt link til vejvisning til Esbjerg hovedbiblotek, som er et samlingspunkt for questen .
+ -->
+
 <template>
   <div class="footer-wrapper">
+    <!-- Øverste billede i footer (illustrationen af figurerne) -->
     <img src="../assets/img/footer.png" class="img-fluid image" alt="..." />
     <footer class="footer">
+       <!-- Første del af footer-sektionen -->
       <section class="py-3 py-md-4 py-xl-7">
         <div class="container overflow-hidden">
           <div class="row gy-4 gy-lg-0 justify-content-xl-between">
+             <!-- Logo-sektion -->
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-              <div class=" logo">
+              <div class="logo">
                 <a href="#!">
-                <img
-                  src="../assets/img/logo.png"
-                  alt=""
-                  class="img-fluid mb-4"
-                  width="175"
-                  height="auto"
-                />
-              </a>
+                  <img
+                    src="../assets/img/logo.png"
+                    alt=""
+                    class="img-fluid mb-4"
+                    width="175"
+                    height="auto"
+                  />
+                </a>
               </div>
             </div>
+              <!-- Sektion med oplysninger om hvor og hvornår -->
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
               <div class="widget">
                 <h4 class="widget-title mb-3">Hvor og hvornår?</h4>
@@ -38,27 +50,36 @@
                 </p>
               </div>
             </div>
+            <!-- Sektion med links til informationer -->
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
               <div class="widget lidt-godt">
                 <h4 class="widget-title mb-4">Informationer</h4>
                 <ul class="list-unstyled">
                   <li class="mb-2">
-                    <a href="https://fantasyfestival.dk/praktisk-info/transport" class="link-secondary text-decoration-none"
+                    <a
+                      href="https://fantasyfestival.dk/praktisk-info/transport"
+                      class="link-secondary text-decoration-none"
                       >Transport</a
                     >
                   </li>
                   <li class="mb-2">
-                    <a href="https://fantasyfestival.dk/praktisk-info/overnatning-i-esbjerg" class="link-secondary text-decoration-none"
+                    <a
+                      href="https://fantasyfestival.dk/praktisk-info/overnatning-i-esbjerg"
+                      class="link-secondary text-decoration-none"
                       >Overnatning</a
                     >
                   </li>
                   <li class="mb-2">
-                    <a href="https://fantasyfestival.dk/praktisk-info/mad-og-drikke" class="link-secondary text-decoration-none"
+                    <a
+                      href="https://fantasyfestival.dk/praktisk-info/mad-og-drikke"
+                      class="link-secondary text-decoration-none"
                       >Mad og drikke</a
                     >
                   </li>
                   <li class="mb-2">
-                    <a href="https://fantasyfestival.dk/program-og-aktiviteter/program" class="link-secondary text-decoration-none"
+                    <a
+                      href="https://fantasyfestival.dk/program-og-aktiviteter/program"
+                      class="link-secondary text-decoration-none"
                       >Program til <br />
                       fantasyfestivalen
                     </a>
@@ -66,6 +87,7 @@
                 </ul>
               </div>
             </div>
+            <!-- Sektion med link og logo til Oplev Esbjergs side -->
             <div class="col-12 col-lg-3 col-xl-4">
               <div class="widget">
                 <h4 class="widget-title mb-4">Oplev Esbjerg</h4>
@@ -82,12 +104,13 @@
           </div>
         </div>
       </section>
-
+      <!-- Nederste del af footeren med copyright og iconer -->
       <div
         class="py-3 py-md-4 py-xl-7 border-top border-light-subtle footer-wrapper"
       >
         <div class="container overflow-hidden">
           <div class="row gy-4 gy-md-0 align-items-md-center">
+            <!-- Copyright afsnit -->            
             <div class="col-md-7">
               <div class="copyright text-center text-md-start">
                 &copy; 2024. Fantasyfestival Esbjerg.
@@ -96,7 +119,10 @@
             <div class="col-md-5">
               <div class="social-icons-container gap-4 py-6">
                 <!-- lokation icon -->
-                <a href="https://www.google.com/maps/place/Esbjerg+Hovedbibliotek/@55.4835185,8.4252528,14z/data=!4m10!1m2!2m1!1sesbjerg+bibliotek!3m6!1s0x464b212b84d27037:0x9e9ee79cad51f7ea!8m2!3d55.4694654!4d8.4542328!15sChFlc2JqZXJnIGJpYmxpb3Rla5IBDnB1YmxpY19saWJyYXJ54AEA!16s%2Fg%2F11dzt5qgl1?entry=ttu" class="button-container">
+                <a
+                  href="https://www.google.com/maps/place/Esbjerg+Hovedbibliotek/@55.4835185,8.4252528,14z/data=!4m10!1m2!2m1!1sesbjerg+bibliotek!3m6!1s0x464b212b84d27037:0x9e9ee79cad51f7ea!8m2!3d55.4694654!4d8.4542328!15sChFlc2JqZXJnIGJpYmxpb3Rla5IBDnB1YmxpY19saWJyYXJ54AEA!16s%2Fg%2F11dzt5qgl1?entry=ttu"
+                  class="button-container"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -112,7 +138,10 @@
                   </svg>
                 </a>
                 <!-- Facebook icon -->
-                <a href="https://www.facebook.com/fantasyfestivalen" class="button-container">
+                <a
+                  href="https://www.facebook.com/fantasyfestivalen"
+                  class="button-container"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -125,7 +154,10 @@
                   </svg>
                 </a>
                 <!-- instagram icon -->
-                <a href="https://www.instagram.com/fantasyfestivalen" class="button-container">
+                <a
+                  href="https://www.instagram.com/fantasyfestivalen"
+                  class="button-container"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -149,6 +181,7 @@
 <script setup></script>
 
 <style scoped>
+/* Generel stil for footer-wrapper */
 .footer-wrapper {
   position: relative;
   width: 100%;
@@ -156,70 +189,80 @@
   padding-bottom: -20px !important;
 }
 
+/* Stil for when-elementet, som er et custom element */
 when {
   font-size: 1rem;
 }
 
+/* Generel stil for SVG-ikonerne */
 svg {
   width: 30px;
   height: 30px;
 }
 
+/* Stil for containeren til sociale ikoner */
 .social-icons-container {
   display: flex;
-  justify-content: flex-end; /* Placerer ikonerne til højre */
-  align-items: center; /* Justerer ikonerne lodret i midten */
+  justify-content: flex-end;
+  align-items: center;
 }
 
+/* Specifik stil til en skærmbrede på max 767px   */
 @media (max-width: 767px) {
   .social-icons-container {
-    justify-content: center; /* Centrerer ikonerne, når skærmen er smal */
+    justify-content: center;
   }
 }
 
+/* Stil for billedet i footeren */
 .image {
   position: relative;
-  top: 50px !important; /* Juster dette tal efter behov for at flytte billedet ned */
-  z-index: 0; /* Sætter billedet bag footeren */
+  top: 50px !important;
+  z-index: 0;
 }
 
+/* Specifik stil for billedet til en skærmbrede på max 767px   */
 @media (max-width: 767px) {
   .image {
-    top: 1px !important; /* Juster dette tal efter behov for at flytte billedet ned */
+    top: 1px !important;
   }
 }
 
-@media(max-width: 480px) {
+/* Specifik stil for billedet til en skærmbrede på max 480px   */
+@media (max-width: 480px) {
   .image {
-    top: 1px !important; /* Juster dette tal efter behov for at flytte billedet ned */
+    top: 1px !important;
   }
 }
 
+/* Stil for footer-elementet */
 footer {
   position: relative;
   background-color: var(--blåsort);
   color: var(--gul);
-  z-index: 1; /* Make sure footer is below image */
+  z-index: 1;
 }
 
+/* Stil for links i footeren */
 footer a {
   color: var(--gul) !important;
 }
 
+/* Stil for logo-containeren */
 .logo {
   padding-top: 20px;
 }
 
+
+/* Stil for nederste del af footerens top border */
 .border-top {
   border-top-color: rgb(245, 200, 66, 0.5) !important;
 }
 
-/* Responsiveness */
-
-
+/* Specifikke justeringer for skærmbrede på max 991px */
 @media (max-width: 991px) {
   .footer-wrapper {
-    padding-bottom: 40px !important; /* Øg padding, da skærmen er mindre */
+    padding-bottom: 40px !important;
   }
 
   .footer .container {
@@ -230,27 +273,27 @@ footer a {
   .footer .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center columns */
+    justify-content: center;
   }
 
   .footer .col-12 {
-    flex: 0 0 48%; /* Two columns in a row */
+    flex: 0 0 48%;
     max-width: 48%;
     margin-bottom: 20px;
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   .footer .col-12:last-child {
-    flex: 0 0 48%; /* Ensure the last child also fits in the row */
+    flex: 0 0 48%;
     max-width: 48%;
     margin-bottom: 20px;
   }
 
   .footer .col-12.widget {
-    flex: 0 0 48%; /* Ensure widgets fit within two columns per row */
+    flex: 0 0 48%;
     max-width: 48%;
     margin-bottom: 20px;
   }
@@ -260,14 +303,15 @@ footer a {
   }
 
   .social-icons-container {
-    justify-content: center; /* Center icons */
+    justify-content: center;
   }
 
   .image {
-    top: 1px !important; /* Reset image position */
+    top: 1px !important;
   }
 }
 
+/* Specifikke justeringer for skærmbrede på max 575px */
 @media (max-width: 575px) {
   .footer .col-md-7 {
     text-align: center;
@@ -275,20 +319,20 @@ footer a {
   }
 }
 
-
+/* Specifikke justeringer for skærmbrede på max 480px */
 @media (max-width: 480px) {
   .footer .col-12 {
-    flex: 0 0 100%; /* One column per row */
+    flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 10px; /* Reduce margin */
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column; /* Make children stack vertically */
-    align-items: center; /* Center items */
-    text-align: left; /* Left align text */
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
   }
 
   .footer .col-12.widget {
-    flex: 0 0 100%; /* Ensure widgets fit within one column per row */
+    flex: 0 0 100%;
     max-width: 100%;
   }
 
@@ -298,29 +342,27 @@ footer a {
   .footer .widget h4,
   .footer .widget p,
   .footer .widget a {
-    font-size: 0.8rem; /* Reduce font size */
+    font-size: 0.8rem;
   }
 
-  .widget{
+  .widget {
     width: 180px;
   }
 
- 
-
   .footer .widget img {
-    width: 80%; /* Reduce image size */
+    width: 80%;
   }
 
   .footer .logo img {
-    width: 100px; /* Reduce logo size */
+    width: 100px;
   }
 
   .social-icons-container {
-    justify-content: center; /* Center icons */
+    justify-content: center;
   }
 
   svg {
-    width: 20px; /* Reduce icon size */
+    width: 20px;
     height: 20px;
   }
 }
