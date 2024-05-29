@@ -171,6 +171,7 @@
     </div>
   </div>
 
+ 
   <!-- Sjete sektion - card indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
