@@ -281,10 +281,12 @@
 <script>
 export default {
   mounted() {
+    let animationPlayed = false;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && !animationPlayed) {
             anime({
               targets: ".card-home",
               keyframes: [
@@ -298,6 +300,7 @@ export default {
               delay: anime.stagger(200),
             });
 
+            animationPlayed = true;
             observer.unobserve(entry.target);
           }
         });
@@ -450,10 +453,6 @@ a:-webkit-any-link:hover {
 .card-home a {
   margin-bottom: 1rem;
 }
-/* Animation fjernet ved MQ fra 768px */
-.no-animation .card-home {
-  animation: none !important;
-}
 
 
 
@@ -511,6 +510,11 @@ a:-webkit-any-link:hover {
   
   .text-box-left p {
     font-size: 12px;
+  }
+
+  .carousel-item img {
+    
+    width: 100%;
   }
 }
 </style>

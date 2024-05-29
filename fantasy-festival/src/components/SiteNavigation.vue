@@ -20,7 +20,7 @@
 
             <RouterLink to="/program" class="nav-item program">
               <a class="nav-link" href="#">
-                <img src="../assets/img/program1.png" alt="Program" width="auto" height="58">
+                <img src="../assets/img/program2.png" alt="Program" width="auto" height="58">
               </a>
               <span v-if="isScrolled">Program</span>
             </RouterLink>
@@ -120,9 +120,7 @@ export default {
 span{
     color: var(--gul);
     font-size: large;
-  
     text-decoration: none;
-   
 }
 
 a {
@@ -189,8 +187,8 @@ a {
     padding-left: 10px;
     padding-top: 10px;
   }
-    
- } 
+
+}
 
  @media (max-width: 767px) {
   .nav-item span {
