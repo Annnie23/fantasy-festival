@@ -1,3 +1,8 @@
+/* Denne kode opsætter en router ved hjælp af Vue Router til en Vue-applikation. 
+Den definerer tre ruter: en til hjemmesiden, en til programvisning og en til questvisning. 
+Hver rute er knyttet til en specifik komponent. Derudover sættes der en scrolladfærd, der sikrer, 
+at siden altid scroller til toppen, når der navigeres til en ny rute. */
+
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
