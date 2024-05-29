@@ -6,7 +6,7 @@
         <div class="container overflow-hidden">
           <div class="row gy-4 gy-lg-0 justify-content-xl-between">
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-              <div class="widget logo">
+              <div class=" logo">
                 <a href="#!">
                 <img
                   src="../assets/img/logo.png"
@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-              <div class="widget">
+              <div class="widget lidt-godt">
                 <h4 class="widget-title mb-4">Informationer</h4>
                 <ul class="list-unstyled">
                   <li class="mb-2">
@@ -155,15 +155,16 @@
   height: auto;
   padding-bottom: -20px !important;
 }
+
 when {
   font-size: 1rem;
 }
 
-svg{
+svg {
   width: 30px;
   height: 30px;
-
 }
+
 .social-icons-container {
   display: flex;
   justify-content: flex-end; /* Placerer ikonerne til højre */
@@ -175,24 +176,152 @@ svg{
     justify-content: center; /* Centrerer ikonerne, når skærmen er smal */
   }
 }
+
 .image {
   position: relative;
   top: 50px !important; /* Juster dette tal efter behov for at flytte billedet ned */
   z-index: 0; /* Sætter billedet bag footeren */
 }
+
+@media (max-width: 767px) {
+  .image {
+    top: 1px !important; /* Juster dette tal efter behov for at flytte billedet ned */
+  }
+}
+
+@media(max-width: 480px) {
+  .image {
+    top: 1px !important; /* Juster dette tal efter behov for at flytte billedet ned */
+  }
+}
+
 footer {
   position: relative;
   background-color: var(--blåsort);
   color: var(--gul);
   z-index: 1; /* Make sure footer is below image */
 }
+
 footer a {
   color: var(--gul) !important;
 }
+
 .logo {
   padding-top: 20px;
 }
+
 .border-top {
   border-top-color: rgb(245, 200, 66, 0.5) !important;
+}
+
+/* Responsiveness */
+
+
+@media (max-width: 991px) {
+  .footer-wrapper {
+    padding-bottom: 40px !important; /* Øg padding, da skærmen er mindre */
+  }
+
+  .footer .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center columns */
+  }
+
+  .footer .col-12 {
+    flex: 0 0 48%; /* Two columns in a row */
+    max-width: 48%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-align: center; /* Center text */
+  }
+
+  .footer .col-12:last-child {
+    flex: 0 0 48%; /* Ensure the last child also fits in the row */
+    max-width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .footer .col-12.widget {
+    flex: 0 0 48%; /* Ensure widgets fit within two columns per row */
+    max-width: 48%;
+    margin-bottom: 20px;
+  }
+
+  .footer .col-md-5 {
+    text-align: center;
+  }
+
+  .social-icons-container {
+    justify-content: center; /* Center icons */
+  }
+
+  .image {
+    top: 1px !important; /* Reset image position */
+  }
+}
+
+@media (max-width: 575px) {
+  .footer .col-md-7 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer .col-12 {
+    flex: 0 0 100%; /* One column per row */
+    max-width: 100%;
+    margin-bottom: 10px; /* Reduce margin */
+    display: flex;
+    flex-direction: column; /* Make children stack vertically */
+    align-items: center; /* Center items */
+    text-align: left; /* Left align text */
+  }
+
+  .footer .col-12.widget {
+    flex: 0 0 100%; /* Ensure widgets fit within one column per row */
+    max-width: 100%;
+  }
+
+  .footer .widget-title,
+  .footer .widget,
+  .footer .widget img,
+  .footer .widget h4,
+  .footer .widget p,
+  .footer .widget a {
+    font-size: 0.8rem; /* Reduce font size */
+  }
+
+  .widget{
+    width: 180px;
+  }
+
+ 
+
+  .footer .widget img {
+    width: 80%; /* Reduce image size */
+  }
+
+  .footer .logo img {
+    width: 100px; /* Reduce logo size */
+  }
+
+  .social-icons-container {
+    justify-content: center; /* Center icons */
+  }
+
+  svg {
+    width: 20px; /* Reduce icon size */
+    height: 20px;
+  }
 }
 </style>
