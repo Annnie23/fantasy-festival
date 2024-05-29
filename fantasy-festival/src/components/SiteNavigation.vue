@@ -155,4 +155,55 @@ a {
 .nav-item:hover span {
   opacity: 0.7;
 }
+
+.navbar-toggler {
+  background-color: var(--orange);
+}
+
+.navbar-collapse {
+  background-color: transparent;
+  position: relative;
+  padding-right: 10px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .navbar-brand img{
+        justify-content: center;
+        display: flex;
+        width: 100px;
+    }
+
+   
+  .navbar-collapse .nav-item span,
+  .navbar-collapse .nav-item img {
+    display: inline-block;
+    transition: padding 0s !important; 
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+}
+
+ @media (max-width: 767px) {
+  .nav-item span {
+    margin-top: 0; /* Adjust this value as needed */
+  }
+}
+
+ @media screen and (max-width: 1100px){
+    .nav-item span {
+        font-size: medium;
+    }
+ }
+ .navbar-collapse .nav-item span,
+  .navbar-collapse .nav-item img {
+    display: inline-block;
+    transition: padding 0s !important; 
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
 </style>
