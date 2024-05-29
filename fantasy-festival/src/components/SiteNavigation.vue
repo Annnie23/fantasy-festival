@@ -11,33 +11,33 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <RouterLink to="/" class="nav-item">
+            <!-- <RouterLink to="/" class="nav-item home">
               <a class="nav-link active" aria-current="page" href="#">
-                <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="58">
+                <img src="../assets/img/hjem.png" alt="Forside" width="auto" height="55">
               </a>
               <span v-if="isScrolled">Forside</span>
-            </RouterLink>
+            </RouterLink> -->
 
-            <RouterLink to="/program" class="nav-item">
+            <RouterLink to="/program" class="nav-item program">
               <a class="nav-link" href="#">
-                <img src="../assets/img/program.png" alt="Program" width="auto" height="58">
+                <img src="../assets/img/program1.png" alt="Program" width="auto" height="58">
               </a>
               <span v-if="isScrolled">Program</span>
             </RouterLink>
           
-              <RouterLink to="/quest" class="nav-item">
+              <RouterLink to="/quest" class="nav-item quest">
               <a class="nav-link" href="#">
-                <img src="../assets/img/quest.png" alt="Quest" width="auto" height="56">
+                <img src="../assets/img/program.png" alt="Quest" width="auto" height="58">
               </a>
               <span v-if="isScrolled">Quest</span>
             </RouterLink>
             
-            <li class="nav-item">
+            <!-- <li class="nav-item fantasy">
               <a class="nav-link" href="https://fantasyfestival.dk/">
                 <img src="../assets/img/drage.png" alt="Festival" width="auto" height="65">
                 </a>
                 <span v-if="isScrolled">Fantasy Festival</span>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -93,8 +93,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     transition: all 0.7s !important;
-    z-index: 1;
-  
+    padding-top: 8px;
 }
 
 
@@ -121,22 +120,33 @@ export default {
 span{
     color: var(--gul);
     font-size: large;
-    padding-left: 5px;
+  
     text-decoration: none;
+   
 }
 
 a {
   text-decoration: none !important;
+  padding-top: 0;
 
 }
 .nav-item {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  transition: flex-direction 1s;
+  transition: flex-direction 2s;
   padding: 0 10px;
   cursor: pointer;
+  position: relative;
+  z-index: 50;
 }
+
+.nav-item:hover {
+  color: var(--gul); /* Ændrer farven til gul ved hover */
+  transform: scale(1.1) !important; /* Skalerer elementet op ved hover */
+}
+
+
 
 .nav-item span {
   opacity: 1;
@@ -176,7 +186,7 @@ a {
   .navbar-collapse .nav-item img {
     display: inline-block;
     transition: padding 0s !important; 
-    padding-left: 0;
+    padding-left: 10px;
     padding-top: 10px;
   }
     
@@ -193,5 +203,12 @@ a {
         font-size: medium;
     }
  }
+ .navbar-collapse .nav-item span,
+  .navbar-collapse .nav-item img {
+    display: inline-block;
+    transition: padding 0s !important; 
+    padding-left: 10px;
+    padding-top: 10px;
+  }
 
 </style>
