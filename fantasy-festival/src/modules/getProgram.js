@@ -3,8 +3,9 @@ Dette er en snyde database
 En database er en samling af data, som er organiseret på en sådan måde, at det er nemt at hente og opdatere data.
 Dette gør at man kun skal opdatere data ét sted, og så vil det blive opdateret alle steder, hvor dataen bliver brugt.
 Denne database, der er designet til at blive brugt i en Vue.js-applikation, 
-hvor den håndterer en liste af programItems, hver med et unikt id, billede, titel, beskrivelse, dato, tidspunkt, link og linktekst.
-
+hvor den håndterer en liste af programItems, hver med et unikt id, billede, titel, beskrivelse, dato, tidspunkt, 
+link og linktekst. (for at læse mere kig i getKarakter.js)
+Dataen er blevet benyttet i ProgramView.vue til at lave programmerne på siden.
 */
 
 
