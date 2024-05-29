@@ -1,6 +1,12 @@
 <template>
-    <link rel="stylesheet" href="../assets/main.css" type="text/css" charset="utf-8" />
-
+  <!-- Henvisning til fonttype -->
+  <link
+    rel="stylesheet"
+    href="../assets/main.css"
+    type="text/css"
+    charset="utf-8"
+  />
+  <!-- Hero billede -->
   <div class="image">
     <img
       class="img-fluid d-block w-100"
@@ -8,40 +14,45 @@
       alt=""
     />
   </div>
-
+  <!-- Første sektion - tekst -->
   <div class="container">
     <section variant="dynamic-xp">
+      <!-- Overskrift 1 -->
       <h1 class="text-3xl font-bold text-start py-5">
         Velkommen til Fantasy Quest Esbjerg - hvor fantasi bliver til
         virkelighed.
       </h1>
+      <!-- Overskrift 2 -->
       <h4 class="py-2">
         Er du klar til at træde ind i en verden fyldt med magi og eventyr?
-          <br />
-          Tag rollen som helten i din egen episke "quest" for at besejre de
-          mørke kræfter og redde hele verden!
+        <br />
+        Tag rollen som helten i din egen episke "quest" for at besejre de mørke
+        kræfter og redde hele verden!
       </h4>
+      <!-- Brødtekst -->
       <p class="py-1">
-          Forestil dig ”Fangerne på Fortet” tilsat en masse magi, noget teater
-          og rollespil, nogle helte og skurke og selvfølgelig kampen mellem det
-          gode og det onde, så er du godt på vej til Fantasy Quest Esbjerg.
-        </p>
-        <p class="py-1">
-          Fantasy Quest Esbjerg får i 2024 både en svær aftenudgave og en
-          familievenlig udgave i dagstimerne under Fantasyfestivalen, der er
-          skrevet i samarbejde med YouTuberen Lakserytteren, hvor alle kan være
-          med.
-        </p>
-        <h5 class="py-2">
-          Har du lyst til lidt større udfordringer, så skrues sværhedsgraden op,
-          når tusmørket lægger sig over Esbjergs gader.
-        </h5>
+        Forestil dig ”Fangerne på Fortet” tilsat en masse magi, noget teater og
+        rollespil, nogle helte og skurke og selvfølgelig kampen mellem det gode
+        og det onde, så er du godt på vej til Fantasy Quest Esbjerg.
+      </p>
+      <p class="py-1">
+        Fantasy Quest Esbjerg får i 2024 både en svær aftenudgave og en
+        familievenlig udgave i dagstimerne under Fantasyfestivalen, der er
+        skrevet i samarbejde med YouTuberen Lakserytteren, hvor alle kan være
+        med.
+      </p>
+      <!-- Overskrift 3 -->
+      <h5 class="py-2">
+        Har du lyst til lidt større udfordringer, så skrues sværhedsgraden op,
+        når tusmørket lægger sig over Esbjergs gader.
+      </h5>
     </section>
-    
   </div>
 
+  <!-- Anden sektion - card son indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
+      <!-- Billede -->
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
@@ -49,6 +60,7 @@
           alt=""
         />
       </div>
+      <!-- Tekst -->
       <div class="col-lg-6">
         <div class="text-card">
           <h4>En oplevelse for hele familien</h4>
@@ -75,8 +87,10 @@
       </div>
     </div>
   </div>
+  <!-- Tredje sektion - card indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
+      <!-- Billede -->
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
@@ -84,6 +98,7 @@
           alt=""
         />
       </div>
+      <!-- Tekst -->
       <div class="col-lg-6">
         <div class="text-card">
           <h3>AftenQuest: Udfordr vennerne!</h3>
@@ -109,8 +124,10 @@
       </div>
     </div>
   </div>
+  <!-- fjedre sektion - card indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
+      <!-- Billede -->
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
@@ -118,6 +135,7 @@
           alt=""
         />
       </div>
+      <!-- Tekst -->
       <div class="col-lg-6">
         <div class="text-card">
           <h3>Esbjergs helt egen fantasyfortælling: Fantasy Quest Esbjerg</h3>
@@ -143,6 +161,7 @@
     </div>
   </div>
 
+  <!-- Femte sektion der indeholder animationsvideo -->
   <div class="container">
     <div class="row py-3">
       <video class="video-fluid" controls>
@@ -152,8 +171,10 @@
     </div>
   </div>
 
+  <!-- Sjete sektion - card indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
+      <!-- Billede -->
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
@@ -161,6 +182,7 @@
           alt=""
         />
       </div>
+      <!-- Tekst -->
       <div class="col-lg-6">
         <div class="text-card">
           <h3>Årene gik, og der var fred og ro...</h3>
@@ -184,6 +206,7 @@
     </div>
   </div>
 
+  <!-- Syvende sektion tekst -->
   <div class="container">
     <div class="row py-5">
       <div class="col-md-12">
@@ -215,8 +238,10 @@
     </div>
   </div>
 
+  <!-- Ottende sektion - card indeholder billede og tekst -->
   <div class="container">
     <div class="row py-3">
+      <!-- Billede -->
       <div class="col-lg-6">
         <img
           class="img-fluid img-thumbnail"
@@ -224,6 +249,7 @@
           alt=""
         />
       </div>
+      <!-- Tekst -->
       <div class="col-lg-6">
         <div class="text-card">
           <h3>Der brygges videre på Questen</h3>
@@ -245,26 +271,53 @@
     </div>
   </div>
 
+  <!-- Sektion med oversigt over årets figurer,
+  Denne del er lavet dynamisk med Vue.js, dette er gjort for at gøre det nemmere at tilføje og ændre figurer i fremtiden 
+  Den er opsat til at kunne indeholde både horizentale og verticale billeder. 
+  Hvor de horizentale skal være i en række og de verticale skal være i to rækker.
+  Det horizentale billede af Vogterkæmperne er derfor sat i en double-column.
+-->
+
   <div class="container">
+    <!-- Teksten der ses over billederne -->
     <div class="row py-3"></div>
     <h1>Mød årets helte og skurke</h1>
+    <!-- Denne paragraf bliver skjult når skærmbreden er max 767px -->
     <p class="hidden">Kør musen over den enkelte figur, for at læse mere</p>
+    <!-- Her starter koden for billed opsætningen -->
     <div class="gallery">
-    <div v-for="item in karakterItems" :key="item.id" 
-    :class="['image-container', 
-                    item.id === 6 ? 'double-column' : '',
-                    item.id === 6 ? 'order-6' : '',
-                    item.id === 7 ? 'order-7' : '']">
-      <img :src="item.image" :alt="'Billede af ' + item.title" />
-      <div class="overlay">
-        <p>{{ item.title }}</p>
+      <!-- 
+    De forskellige item.id === har forskellige funktioner -
+    Den første der hedder item.id === 6 ? 'double-column' : '', gør at item 6 bliver sat i en double-column.
+    Den anden under, gør at ved skærmstørrelser under 768px bliver rækkefølgen byttet om og item 6 og 7 bliver sat i en anden rækkefølge. 
+    item.id === 6 ? 'order-6' : '',
+    item.id === 7 ? 'order-7' : '']" 
+  -->
+      <div
+        v-for="item in karakterItems"
+        :key="item.id"
+        :class="[
+          'image-container',
+          item.id === 6 ? 'double-column' : '',
+          item.id === 6 ? 'order-6' : '',
+          item.id === 7 ? 'order-7' : '',
+        ]"
+      >
+        <img :src="item.image" :alt="'Billede af ' + item.title" />
+        <!-- Denne klasse "overlay" er sat op til at vise en tekst over
+  billedet, når musen holdes over billedet.
+  p-elementet viser værdien af "item.title".
+-->
+        <div class="overlay">
+          <p>{{ item.title }}</p>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 
 <script setup>
+/* Denne script importerer de værdier der bruges i sektionen med figurer */
 import { ref, computed } from "vue";
 import getKarakterItems from "@/modules/getKarakter.js";
 
@@ -276,54 +329,58 @@ const filteredKarakterItems = computed(() => {
 </script>
 
 <style scoped>
+
+/* For at få indholdet centreret  */
 .col-lg-6 {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
+/* Tekst farve til container klassen */
 .container {
   color: var(--mørkeblå);
-
 }
 
+/* Grundlæggende stil for tekstkortet */
 .text-card {
-  position: relative; /* Gør det muligt at positionere elementet præcist */
-  width: 100%; /* Justerer bredden efter behov */
+  position: relative;
+  width: 100%;
   padding: 10px;
   color: var(--mørkeblå);
   border-radius: 10px;
   text-align: left;
 }
 
-/* Sørg for at billedets container er relativt positioneret */
+/* Stil for billederne i sektionerne */
 .image-container {
   position: relative;
-  width: calc(25% - 20px); /* Bevarer samme bredde som tidligere */
+  width: calc(25% - 20px);
   margin: 10px;
   overflow: hidden;
 }
 
+/* Stil for billede uden ramme og med afrundede hjørner */
 .img-thumbnail {
   border: none;
   border-radius: 10px;
 }
 
+/* Responsiv stil for tekstkort på skærme mindre end 768px */
 @media screen and (max-width: 768px) {
   .text-card {
-    width: 100%; /* Ændrer bredden til 100% på skærme mindre end 768px */
-    margin: 0; /* Fjerner margen for at undgå overlapning */
-    border-radius: 10px; /* Fjerner border-radius for at undgå overlapning */
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
   }
 }
-
+/* Responsiv stil for tekstkort på skærme mindre end 480px */
 @media screen and (max-width: 480px) {
   .text-card {
-    padding: 15px; /* Tilpasser padding for mindre skærme */
+    padding: 15px;
   }
 }
 
-/* Knapper */
+/* Stil for knapper */
 button {
   font-family: monospace;
   background: rgb(14, 35, 66);
@@ -335,32 +392,35 @@ button {
   transition: 0.3s;
 }
 
+/* Hover effekt på knapperne */
 button:hover {
   background-color: var(--mørkeblå);
   box-shadow: 0 0 0 2px #023a6b;
   color: var(--orange);
 }
 
+/* Opstilling af billederne af figurerne */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Stil for billedbeholder, med transition for hover effekt */
 .image-container {
   position: relative;
-  width: calc(25% - 20px); /* Adjusted for 4 columns with margin */
+  width: calc(25% - 20px);
   margin: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 
+/* Stil for dobbelt kolonne */
 .double-column {
-  width: calc(50% - 20px); /* Adjusted for 2 columns with margin */
+  width: calc(50% - 20px);
 }
 
-
-
+/* Stil for billeder inde i billedbeholder */
 .image-container img {
   width: 100%;
   height: auto;
@@ -368,11 +428,13 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
+/* Stil for billede uden ramme og med afrundede hjørner */
 .img-thumbnail {
   border: none;
   border-radius: 10px;
 }
 
+/* Stil af boksen til figurerne */
 .overlay {
   position: absolute;
   bottom: -50px;
@@ -389,32 +451,33 @@ button:hover {
   transition: bottom 0.3s ease, opacity 0.3s ease;
 }
 
+/* Stil for tekst i overlay */
 .overlay p {
   color: var(--gul);
   font-size: 20px;
 }
 
+/* Hover effekt på figurerne */
 .image-container:hover img {
   transform: scale(1.2);
 }
 
+/* Hover effekt på overlay */
 .image-container:hover .overlay {
   bottom: 0;
   opacity: 1;
 }
 
-/* Medierækkevidder for responsivitet */
+/* Responsiv stil for billedbeholder på skærme mindre end 768px */
 @media screen and (max-width: 768px) {
   .image-container {
-    width: calc(
-      50% - 20px
-    ); /* To billeder pr. række på skærme, der er mindre end 768px brede */
+    width: calc(50% - 20px);
   }
 
   .text-card {
-    width: 100%; /* Ændrer bredden til 100% på skærme mindre end 768px */
-    margin: 0; /* Fjerner margen for at undgå overlapning */
-    border-radius: 10px; /* Fjerner border-radius for at undgå overlapning */
+    width: 100%;
+    margin: 0;
+    border-radius: 10px;
   }
 
   .overlay {
@@ -422,58 +485,67 @@ button:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Sætter maksimal højde til 60px */
-    display: flex; /* Brug flexbox */
-    justify-content: center; /* Centrerer vandret */
-    align-items: center; /* Centrerer lodret */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     background: linear-gradient(
       270deg,
       rgba(80, 180, 165, 1) 0%,
       rgba(14, 35, 66, 0.8576680672268908) 0%
     );
-    text-align: center; /* Centrere tekst */
+    text-align: center;
     opacity: 1;
     transition: none;
   }
 
   .overlay p {
     color: var(--gul);
-    font-size: 16px; /* Mindre tekststørrelse for bedre pasform */
-    margin: 0; /* Fjerner margin for at undgå overlapning */
+    font-size: 16px;
+    margin: 0;
   }
 
   .image-container img {
-    transform: none; /* Disable zoom effect on smaller screens */
+    transform: none;
   }
 
   .hidden {
     display: none;
   }
-   .image-container {
-    width: calc(50% - 20px); /* Two images per row on smaller screens */
+  .image-container {
+    width: calc(50% - 20px);
   }
 
   .double-column {
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
   }
-  .order-6 { order: 7; }
-  .order-7 { order: 6; }
+  .order-6 {
+    order: 7;
+  }
+  .order-7 {
+    order: 6;
+  }
 }
 
+/* Responsiv stil for billedbeholder på skærme mindre end 480px */
 @media screen and (max-width: 480px) {
   .image-container {
-    width: calc(50% - 10px); /* To billeder pr. række på skærme mindre end 480px brede */
-    margin: 5px; /* Mindre margin for at få plads til to billeder pr. række */
+    width: calc(50% - 10px);
+    margin: 5px;
   }
 
   .double-column {
-    width: calc(100% - 20px); /* Fylder hele rækken */
-    margin: 8px 0; 
+    width: calc(100% - 20px);
+    margin: 8px 0;
   }
 
-  .order-6 { order: 7; }
-  .order-7 { order: 6; }
+  .order-6 {
+    order: 7;
+  }
+  .order-7 {
+    order: 6;
+  }
 
   .overlay {
     bottom: 0;
@@ -489,8 +561,7 @@ button:hover {
   }
 
   .image-container img {
-    transform: none; /* Disable zoom effect on smaller screens */
+    transform: none;
   }
 }
-
 </style>
