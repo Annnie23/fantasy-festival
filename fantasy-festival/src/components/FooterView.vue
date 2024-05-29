@@ -6,7 +6,7 @@
         <div class="container overflow-hidden">
           <div class="row gy-4 gy-lg-0 justify-content-xl-between">
             <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-              <div class="widget logo">
+              <div class=" logo">
                 <a href="#!">
                 <img
                   src="../assets/img/logo.png"
@@ -301,9 +301,11 @@ footer a {
     font-size: 0.8rem; /* Reduce font size */
   }
 
-  .footer .col-12.widget .lidt-godt{
-    color: red;
+  .widget{
+    width: 180px;
   }
+
+ 
 
   .footer .widget img {
     width: 80%; /* Reduce image size */
