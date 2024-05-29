@@ -227,9 +227,7 @@
       <div class="row justify-content-center">
         <div class="col-md-4">
           <div class="card-home">
-            <a href="https://fantasyfestival.dk/">
               <img src="../assets/img/drage.png" alt="" width="auto" height="70">
-            </a>
             <router-link to="/program">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Festival</h3>
@@ -245,9 +243,7 @@
         </div>
         <div class="col-md-4">
           <div class="card-home">
-            <a href="https://fantasyfestival.dk/fantasy-quest-esbjerg">
               <img src="../assets/img/program.png" alt="" width="auto" height="70">
-            </a>
             <router-link to="/quest">
             <div class="card-body">
               <h3 class="text-2xl font-bold">Fantasy Quest</h3>
@@ -320,10 +316,21 @@ export default {
 
 <style scoped>
 /* Stilen for hele karousellen */
-.carousel {
+.carousel-item {
   width: 100%;
   height: 100vh;
   position: relative;
+}
+
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .carousel-item img {
@@ -331,7 +338,6 @@ export default {
   height: 100vh;
   object-fit: cover;
 }
-
 
 .carousel-item.active .carousel-caption {
   opacity: 1; /* Show the caption on the active slide */
